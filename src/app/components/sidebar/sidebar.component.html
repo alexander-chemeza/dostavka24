@@ -1,0 +1,26 @@
+<nav class="navbar">
+  <div class="navbar-logo" routerLinkActive="" [routerLinkActiveOptions]="{exact: true}">
+    <a [routerLink]="['']">
+      <img src="../../../assets/img/logo.svg" alt="big-logo">
+    </a>
+  </div>
+  <ul>
+    <li routerLinkActive="active-menu" [routerLinkActiveOptions]="{exact: true}">
+      <img src="../../../assets/img/signing/log-in.svg" alt="log-in">
+      <a [routerLink]="['']">
+        Вход</a>
+    </li>
+    <li routerLinkActive="active-menu">
+      <img src="../../../assets/img/signing/recover.svg" alt="recover">
+      <a [routerLink]="['/recover']">Забыли пароль</a>
+    </li>
+    <li routerLinkActive="active-menu">
+      <img src="../../../assets/img/signing/registration.svg" alt="registration">
+      <a [routerLink]="['/registration']">Регистрация</a>
+    </li>
+    <li routerLinkActive="active-menu">
+      <img src="../../../assets/img/signing/calc.svg" alt="calculator">
+      <a [routerLink]="['/calculator']">Калькулятор</a>
+    </li>
+  </ul>
+</nav>
