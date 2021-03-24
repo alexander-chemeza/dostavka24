@@ -4,3 +4,74 @@ body {
   margin: 0;
   padding: 0;
 }
+
+.admin {
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 73px 85px;
+}
+
+.admin-text {
+  font-size: 18px;
+  font-family: "Montserrat-Medium", sans-serif;
+  color: #fff;
+  margin: 0;
+  max-width: 600px;
+}
+
+.form {
+  box-sizing: border-box;
+  background-color: #EEE6F5;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  padding: 30px 32px 40px 32px;
+  margin-top: 57px;
+
+  & label {
+    font-size: 14px;
+    font-family: "Montserrat-SemiBold", sans-serif;
+    color: rgba(0,0,0,.5);
+  }
+
+  & label:last-of-type {
+    margin-top: 10px;
+  }
+
+  & input[type='text'],
+  & input[type='password'],
+  & input[type='email'] {
+    box-sizing: border-box;
+    height: 40px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    margin-top: 12px;
+    font-family: "Montserrat-SemiBold", sans-serif;
+    font-size: 16px;
+    color: rgba(0,0,0,.75);
+  }
+
+  & input[type='submit'] {
+    margin-top: 40px;
+    background-color: #ABCF37;
+    border: none;
+    border-radius: 39px;
+    font-family: "Montserrat-Medium", sans-serif;
+    font-size: 14px;
+    color: #fff;
+    outline: none;
+  }
+}
+
+.form-verification {
+  font-family: "Montserrat-SemiBold", sans-serif;
+  font-size: 14px;
+  color: #D16C65;
+  margin-top: 10px;
+  opacity: 0;
+}
