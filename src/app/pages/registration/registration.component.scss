@@ -1,0 +1,105 @@
+.agreement-show {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+  justify-content: space-between;
+}
+
+.agreement-hide {
+  display: none;
+}
+
+.person-no-agreement-show {
+  display: block;
+}
+
+.person-no-agreement-hide {
+  display: none;
+}
+
+.person-with-agreement-show {
+  display: block;
+}
+
+.person-with-agreement-hide {
+  display: none;
+}
+
+.active-agreement {
+  font-family: "Montserrat-SemiBold", sans-serif;
+  font-size: 14px;
+}
+
+.nonactive-agreement {
+  font-family: "Montserrat-Medium", sans-serif;
+  font-size: 14px;
+}
+
+fieldset {
+  border: none;
+}
+
+.registration {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  padding: 33px 103px;
+
+  &-cap {
+    padding: 30px;
+    background-color: #EEE6F5;
+    border-radius: 10px;
+    box-sizing: border-box;
+
+    &-header {
+      font-size: 14px;
+      font-family: "Montserrat-SemiBold", sans-serif;
+      color: rgba(0,0,0,.5);
+      margin: 0;
+    }
+
+    &-controls {
+      margin-top: 20px;
+      display: flex;
+
+      &-col {
+        width: 50%;
+      }
+
+      &-warning {
+        margin: 0;
+        font-size: 14px;
+        font-family: "Montserrat-Medium";
+      }
+    }
+  }
+
+  &-form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+    &.no-agreement,
+    &.with-agreement {
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      padding: 0;
+    }
+
+    &-box {
+      margin-top: 30px;
+      width: 48.75%;
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      padding: 30px;
+      background-color: #EEE6F5;
+      border-radius: 10px;
+
+      &.fiz, &.ur {
+        width: 100%;
+      }
+    }
+  }
+}

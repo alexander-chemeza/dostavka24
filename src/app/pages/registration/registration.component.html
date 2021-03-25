@@ -2,21 +2,25 @@
   <div class="registration-cap">
     <h3 class="registration-cap-header">Наличие транспортного договора</h3>
     <div class="registration-cap-controls">
-      <input type="radio" name="agreement" id="with-agreement">
-      <label for="with-agreement">Есть договор</label>
-      <input type="radio" name="agreement" id="no-agreement">
-      <label for="no-agreement">Нет договора</label>
-      <h6 class="registration-cap-controls-warning">Заполните ,пожалуйста, форму  для заключения договора</h6>
+      <div class="registration-cap-controls-col">
+        <input type="radio" name="agreement" id="with-agreement" (change)="agreement = !agreement">
+        <label [ngClass]="{'active-agreement': agreement, 'nonactive-agreement': !agreement}" for="with-agreement">Есть договор</label>
+        <input type="radio" name="agreement" id="no-agreement" checked (change)="agreement = !agreement">
+        <label [ngClass]="{'active-agreement': !agreement, 'nonactive-agreement': agreement}" for="no-agreement">Нет договора</label>
+      </div>
+      <div class="registration-cap-controls-col">
+        <h6 class="registration-cap-controls-warning">Заполните, пожалуйста, форму  для заключения договора</h6>
+      </div>
     </div>
   </div>
   <form class="registration-form" action="">
-    <fieldset class="no-agreement">
+    <fieldset class="no-agreement" [ngClass]="{'agreement-show': !agreement, 'agreement-hide': agreement}">
       <div class="registration-form-box">
         <div class="registration-form-controls">
-          <button>Юр. лицо</button>
-          <button>Физ. лицо</button>
+          <button class="no-agreement-control" (click)="toggleNoPerson($event)">Юр. лицо</button>
+          <button class="no-agreement-control" (click)="toggleNoPerson($event)" disabled>Физ. лицо</button>
         </div>
-        <fieldset class="fiz">
+        <fieldset class="fiz" [ngClass]="{'person-no-agreement-show': !personNoAgreement, 'person-no-agreement-hide': personNoAgreement}">
           <label for="fiz_uzername"></label>
           <input type="text" name="fiz_username" id="fiz_uzername">
           <label for=""></label>
@@ -39,7 +43,7 @@
           <label for="who-did-it">Кем выдано удостоверение*</label>
           <input type="text" name="who-did-it" id="who-did-it">
         </fieldset>
-        <fieldset class="ur">
+        <fieldset class="ur" [ngClass]="{'person-no-agreement-show': personNoAgreement, 'person-no-agreement-hide': !personNoAgreement}">
           <label for="">Наименование клиента</label>
           <input type="text">
           <label for="">Юридический адрес*</label>
@@ -51,7 +55,7 @@
         </fieldset>
       </div>
       <div class="registration-form-box">
-        <fieldset class="fiz">
+        <fieldset class="fiz" [ngClass]="{'person-no-agreement-show': !personNoAgreement, 'person-no-agreement-hide': personNoAgreement}">
           <label for="date-of-get">Дата выдачи*</label>
           <input type="text" name="date-of-get" id="date-of-get">
           <label for="lic_number">Личный номер*</label>
@@ -63,7 +67,7 @@
           <label for="email">Email*</label>
           <input type="email" name="email" id="email">
         </fieldset>
-        <fieldset class="ur">
+        <fieldset class="ur" [ngClass]="{'person-no-agreement-show': personNoAgreement, 'person-no-agreement-hide': !personNoAgreement}">
           <label for="">ОКПО*</label>
           <input type="text">
           <label for="">ФИО уполномоченного лица*</label>
@@ -77,22 +81,22 @@
         </fieldset>
       </div>
       <div class="row">
-        <fieldset class="fiz">
+        <fieldset class="fiz" [ngClass]="{'person-no-agreement-show': !personNoAgreement, 'person-no-agreement-hide': personNoAgreement}">
           <h6 class="next-boxes">Прочая информация</h6>
         </fieldset>
-        <fieldset class="ur">
+        <fieldset class="ur" [ngClass]="{'person-no-agreement-show': personNoAgreement, 'person-no-agreement-hide': !personNoAgreement}">
           <h6 class="next-boxes">Банковские реквизиты</h6>
           <h6 class="next-boxes">Прочая информация</h6>
         </fieldset>
       </div>
       <div class="registration-form-box">
-        <fieldset class="fiz">
+        <fieldset class="fiz" [ngClass]="{'person-no-agreement-show': !personNoAgreement, 'person-no-agreement-hide': personNoAgreement}">
           <label for="freq">Частота доставки груза*</label>
           <input type="number" name="freq" id="freq">
           <label for="cargo_description">Описание грузов</label>
           <input type="text" name="cargo_description" id="cargo_description">
         </fieldset>
-        <fieldset class="ur">
+        <fieldset class="ur" [ngClass]="{'person-no-agreement-show': personNoAgreement, 'person-no-agreement-hide': !personNoAgreement}">
           <label for="">Наименование банка*</label>
           <input type="text">
           <label for="">Адрес банка*</label>
@@ -108,11 +112,11 @@
         </fieldset>
       </div>
       <div class="registration-form-box">
-        <fieldset class="fiz">
+        <fieldset class="fiz" [ngClass]="{'person-no-agreement-show': !personNoAgreement, 'person-no-agreement-hide': personNoAgreement}">
           <input type="file">
           <p>Прикрепите, пожалуйста, страницы паспорта ( прописка,  последняя и предпоследняя страница в развороте )</p>
         </fieldset>
-        <fieldset class="ur">
+        <fieldset class="ur" [ngClass]="{'person-no-agreement-show': personNoAgreement, 'person-no-agreement-hide': !personNoAgreement}">
           <label for="">НЧастота доставки груза*</label>
           <input type="text">
           <label for="">Описание груза</label>
@@ -124,17 +128,17 @@
         </fieldset>
       </div>
     </fieldset>
-    <fieldset class="with-agreement">
+    <fieldset class="with-agreement" [ngClass]="{'agreement-show': agreement, 'agreement-hide': !agreement}">
       <div class="row">
-        <button>Юр. лицо</button>
-        <button>Физ. лицо</button>
+        <button class="with-agreement-control" (click)="toggleWithPerson($event)">Юр. лицо</button>
+        <button class="with-agreement-control" (click)="toggleWithPerson($event)" disabled>Физ. лицо</button>
       </div>
       <div class="registration-form-box-full">
-        <fieldset class="fiz">
+        <fieldset class="fiz" [ngClass]="{'person-with-agreement-show': !personWithAgreement, 'person-with-agreement-hide': personWithAgreement}">
           <label for="">Идентификационный номер паспорта</label>
           <input type="text">
         </fieldset>
-        <fieldset class="ur">
+        <fieldset class="ur" [ngClass]="{'person-with-agreement-show': personWithAgreement, 'person-with-agreement-hide': !personWithAgreement}">
           <div class="row">
             <div class="item">
               <label for="">Компания</label>
@@ -148,7 +152,7 @@
         </fieldset>
       </div>
       <div class="registration-form-box">
-        <fieldset class="fiz">
+        <fieldset class="fiz" [ngClass]="{'person-with-agreement-show': !personWithAgreement, 'person-with-agreement-hide': personWithAgreement}">
           <label for="">Имя</label>
           <input type="text">
           <label for="">Email</label>
@@ -156,7 +160,7 @@
           <label for="">Телефон</label>
           <input type="text">
         </fieldset>
-        <fieldset class="ur">
+        <fieldset class="ur" [ngClass]="{'person-with-agreement-show': personWithAgreement, 'person-with-agreement-hide': !personWithAgreement}">
           <label for="">Имя</label>
           <input type="text">
           <label for="">Email</label>
@@ -166,7 +170,7 @@
         </fieldset>
       </div>
       <div class="registration-form-box">
-        <fieldset class="fiz">
+        <fieldset class="fiz" [ngClass]="{'person-with-agreement-show': !personWithAgreement, 'person-with-agreement-hide': personWithAgreement}">
           <label for="">Логин</label>
           <input type="text">
           <label for="">Пароль</label>
@@ -174,7 +178,7 @@
           <label for="">Пароль (подтвердить)</label>
           <input type="text">
         </fieldset>
-        <fieldset class="ur">
+        <fieldset class="ur" [ngClass]="{'person-with-agreement-show': personWithAgreement, 'person-with-agreement-hide': !personWithAgreement}">
           <label for="">Логин</label>
           <input type="text">
           <label for="">Пароль</label>
