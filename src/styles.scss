@@ -73,6 +73,11 @@ input:-webkit-autofill:active
     font-size: 14px;
     color: #fff;
     outline: none;
+    transition: all .5s;
+
+    &:hover {
+      background: #8bb307;
+    }
   }
 }
 
