@@ -21,16 +21,16 @@
           <button class="no-agreement-control" (click)="toggleNoPerson($event)" disabled>Физ. лицо</button>
         </div>
         <fieldset class="fiz" [ngClass]="{'person-no-agreement-show': !personNoAgreement, 'person-no-agreement-hide': personNoAgreement}">
-          <label for="fiz_uzername"></label>
+          <label for="fiz_uzername">ФИО</label>
           <input type="text" name="fiz_username" id="fiz_uzername">
-          <label for=""></label>
+          <label for="">Вид документа*</label>
           <select name="fiz_document" id="fiz_document">
-            <option value="-1" selected>Выберите вид удостоверения</option>
+            <option value="-1" selected disabled hidden>Выберите вид удостоверения</option>
             <option value="0">Паспорт образца</option>
             <option value="1">Вид на жительство</option>
             <option value="2">Вид на жительство</option>
           </select>
-          <div class="row">
+          <div class="row no-agreement-fiz-cols">
             <div class="item">
               <label for="seria">Серия*</label>
               <input type="text" name="seria" id="seria">
@@ -80,14 +80,14 @@
           <input type="text">
         </fieldset>
       </div>
-      <div class="row">
-        <fieldset class="fiz" [ngClass]="{'person-no-agreement-show': !personNoAgreement, 'person-no-agreement-hide': personNoAgreement}">
+      <div class="row" style="width: 100%">
+        <div class="fiz1" [ngClass]="{'person-no-agreement-show': !personNoAgreement, 'person-no-agreement-hide': personNoAgreement}">
           <h6 class="next-boxes">Прочая информация</h6>
-        </fieldset>
-        <fieldset class="ur" [ngClass]="{'person-no-agreement-show': personNoAgreement, 'person-no-agreement-hide': !personNoAgreement}">
+        </div>
+        <div class="ur1" [ngClass]="{'person-no-agreement-show': personNoAgreement, 'person-no-agreement-hide': !personNoAgreement}">
           <h6 class="next-boxes">Банковские реквизиты</h6>
           <h6 class="next-boxes">Прочая информация</h6>
-        </fieldset>
+        </div>
       </div>
       <div class="registration-form-box">
         <fieldset class="fiz" [ngClass]="{'person-no-agreement-show': !personNoAgreement, 'person-no-agreement-hide': personNoAgreement}">
@@ -113,11 +113,12 @@
       </div>
       <div class="registration-form-box">
         <fieldset class="fiz" [ngClass]="{'person-no-agreement-show': !personNoAgreement, 'person-no-agreement-hide': personNoAgreement}">
+          <h6>Прикрепить файл</h6>
           <input type="file">
           <p>Прикрепите, пожалуйста, страницы паспорта ( прописка,  последняя и предпоследняя страница в развороте )</p>
         </fieldset>
         <fieldset class="ur" [ngClass]="{'person-no-agreement-show': personNoAgreement, 'person-no-agreement-hide': !personNoAgreement}">
-          <label for="">НЧастота доставки груза*</label>
+          <label for="">Частота доставки груза*</label>
           <input type="text">
           <label for="">Описание груза</label>
           <input type="text">

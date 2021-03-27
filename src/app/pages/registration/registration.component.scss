@@ -10,7 +10,9 @@
 }
 
 .person-no-agreement-show {
-  display: block;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
 }
 
 .person-no-agreement-hide {
@@ -18,7 +20,9 @@
 }
 
 .person-with-agreement-show {
-  display: block;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
 }
 
 .person-with-agreement-hide {
@@ -37,6 +41,8 @@
 
 fieldset {
   border: none;
+  margin: 0;
+  padding: 0;
 }
 
 .registration {
@@ -79,6 +85,10 @@ fieldset {
     display: flex;
     flex-direction: column;
 
+    &-colntrols {
+      margin-bottom: 12px;
+    }
+
     &.no-agreement,
     &.with-agreement {
       width: 100%;
@@ -101,5 +111,121 @@ fieldset {
         width: 100%;
       }
     }
+  }
+}
+
+.with-agreement-control,
+.no-agreement-control {
+  margin-right: 20px;
+  outline: none;
+  padding: 10px 20px;
+  font-size: 14px;
+  font-family: "Montserrat-SemiBold", sans-serif;
+  color: rgba(0, 0, 0, 0.5);
+  background-color: #fff;
+  border: none;
+  border-radius: 5px;
+}
+
+.with-agreement-control[disabled],
+.no-agreement-control[disabled] {
+  background-color: #8D60B5;
+  color: #fff;
+}
+
+input {
+  margin-top: 12px;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  font-family: "Montserrat-Medium", sans-serif;
+  font-size: 16px;
+  color: rgba(0,0,0,0.75);
+}
+
+label {
+  margin-top: 20px;
+  font-family: "Montserrat-SemiBold", sans-serif;
+  font-size: 14px;
+  color: rgba(0,0,0,.5);
+}
+
+fieldset label:first-of-type {
+  margin-top: 0;
+}
+
+.registration-form-controls {
+  margin-bottom: 50px;
+}
+
+.next-boxes {
+  margin: 30px 0 0 0;
+  width: 48.75%;
+  font-family: "Montserrat-SemiBold", sans-serif;
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.fiz1, .ur1 {
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.no-agreement-fiz-cols {
+  margin-top: 20px;
+  box-sizing: border-box;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+
+  & .item {
+    box-sizing: border-box;
+    width: 47%;
+
+    & input {
+      box-sizing: border-box;
+      width: 100%;
+    }
+  }
+}
+
+select {
+  margin-top: 12px;
+  appearance: none;
+  background-color: #fff;
+  background-image: url("../../../assets/img/signing/select.svg");
+  background-repeat: no-repeat;
+  background-position: 95% 50%;
+  font-family: "Montserrat-SemiBold", sans-serif;
+  font-size: 14px;
+  color: rgba(0,0,0,.5);
+  padding: 12px 15px;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+
+}
+
+option {
+  font-family: "Montserrat-SemiBold", sans-serif;
+  font-size: 14px;
+  color: #000000;
+}
+
+input[type='submit'] {
+  max-width: 230px;
+  color: #fff;
+  padding: 14px 73px;
+  font-family: "Montserrat-Medium", sans-serif;
+  font-size: 14px;
+  margin-top: 47px;
+  border-radius: 40px;
+  border: none;
+  background-color: #ABCF37;
+  transition: all .5s;
+
+  &:hover {
+    background: #8bb307;
   }
 }
