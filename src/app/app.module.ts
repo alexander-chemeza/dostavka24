@@ -10,6 +10,15 @@ import { RegistrationComponent } from './pages/registration/registration.compone
 import { CalculatorComponent } from './pages/calculator/calculator.component';
 
 import { SidebarComponent } from './components/sidebar/sidebar.component';
+import { HomeComponent } from './pages/home/home.component';
+import { JournalComponent } from './pages/journal/journal.component';
+import { TemplateComponent } from './pages/template/template.component';
+import { BookComponent } from './pages/book/book.component';
+import { UsersComponent } from './pages/users/users.component';
+import { DocsComponent } from './pages/docs/docs.component';
+import { InstructionsComponent } from './pages/instructions/instructions.component';
+import { ProfileComponent } from './pages/profile/profile.component';
+import { OrderComponent } from './pages/order/order.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +27,16 @@ import { SidebarComponent } from './components/sidebar/sidebar.component';
     LoginComponent,
     RecoverComponent,
     RegistrationComponent,
-    CalculatorComponent
+    CalculatorComponent,
+    HomeComponent,
+    JournalComponent,
+    TemplateComponent,
+    BookComponent,
+    UsersComponent,
+    DocsComponent,
+    InstructionsComponent,
+    ProfileComponent,
+    OrderComponent
   ],
   imports: [
     BrowserModule,
