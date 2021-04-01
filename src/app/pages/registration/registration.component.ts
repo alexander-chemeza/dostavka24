@@ -7,9 +7,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RegistrationComponent implements OnInit {
 
-  agreement = false
-  personNoAgreement = false
-  personWithAgreement = false
+  agreement = false;
+  personNoAgreement = false;
+  personWithAgreement = false;
 
   constructor() { }
 
@@ -18,20 +18,20 @@ export class RegistrationComponent implements OnInit {
 
   toggleNoPerson(event) {
     const controls = document.getElementsByClassName('no-agreement-control') as HTMLCollectionOf<HTMLLinkElement>
-    for(let c of Array.from(controls)) {
-      c.disabled = false
+    for (const c of Array.from(controls)) {
+      c.disabled = false;
     }
-    event.target.disabled = true
-    this.personNoAgreement = !this.personNoAgreement
+    event.target.disabled = true;
+    this.personNoAgreement = !this.personNoAgreement;
   }
 
   toggleWithPerson(event) {
     const controls = document.getElementsByClassName('with-agreement-control') as HTMLCollectionOf<HTMLLinkElement>
-    for(let c of Array.from(controls)) {
-      c.disabled = false
+    for (const c of Array.from(controls)) {
+      c.disabled = false;
     }
-    event.target.disabled = true
-    this.personWithAgreement = !this.personWithAgreement
+    event.target.disabled = true;
+    this.personWithAgreement = !this.personWithAgreement;
   }
 
 }

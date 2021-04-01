@@ -1,6 +1,7 @@
 .navbar {
   width: 13vw;
   height: 100%;
+  box-sizing: border-box;
 }
 
 .navbar ul {
@@ -34,6 +35,10 @@
   border-bottom-left-radius: 63px;
   position: relative;
   background-color: #A070B5;
+
+  &_psm {
+    padding: 7px !important;
+  }
 }
 
 .navbar ul li.active-menu a {
@@ -71,4 +76,19 @@ li.active-menu img {
   margin-right: 18px;
   width: 24px;
   height: 24px;
+}
+
+.new-order {
+  text-decoration: none;
+  font-family: "Montserrat-Medium", sans-serif;
+  font-size: 14px;
+  color: #ffffff;
+  padding: 14px 38px;
+  border-radius: 25px;
+  background-color: #ABCF37;
+  transition: all .3s;
+
+  &:hover {
+    background-color: #8bb307;
+  }
 }
