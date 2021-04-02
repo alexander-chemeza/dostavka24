@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
-import {FormsModule} from "@angular/forms";
 
 import { AppComponent } from './app.component';
 import { LoginComponent } from './pages/login/login.component';
@@ -19,6 +18,7 @@ import { DocsComponent } from './pages/docs/docs.component';
 import { InstructionsComponent } from './pages/instructions/instructions.component';
 import { ProfileComponent } from './pages/profile/profile.component';
 import { OrderComponent } from './pages/order/order.component';
+import {RegistrationModule} from './pages/registration/registration.module';
 
 @NgModule({
   declarations: [
@@ -26,7 +26,6 @@ import { OrderComponent } from './pages/order/order.component';
     SidebarComponent,
     LoginComponent,
     RecoverComponent,
-    RegistrationComponent,
     CalculatorComponent,
     HomeComponent,
     JournalComponent,
@@ -40,8 +39,8 @@ import { OrderComponent } from './pages/order/order.component';
   ],
   imports: [
     BrowserModule,
-    FormsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    RegistrationModule
   ],
   providers: [],
   bootstrap: [AppComponent]

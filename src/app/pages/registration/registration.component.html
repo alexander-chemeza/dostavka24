@@ -137,6 +137,8 @@
           <input type="text">
         </fieldset>
       </div>
+      <input [ngClass]="{'person-no-agreement-show': !personNoAgreement, 'person-no-agreement-hide': personNoAgreement}" type="submit" value="Отправить">
+      <input [ngClass]="{'person-no-agreement-show': personNoAgreement, 'person-no-agreement-hide': !personNoAgreement}" type="submit" value="Отправить">
     </fieldset>
     <fieldset class="with-agreement" [ngClass]="{'agreement-show': agreement, 'agreement-hide': !agreement}">
       <div class="registration-form-box-full">
@@ -156,11 +158,11 @@
           <div class="row">
             <div class="item">
               <label for="">Компания</label>
-              <input type="text">
+              <input type="text" [(ngModel)]="companyName" name="companyName">
             </div>
             <div class="item">
               <label for="">УНП компании</label>
-              <input type="text">
+              <input type="text" [(ngModel)]="unp" name="unp">
             </div>
           </div>
         </fieldset>
@@ -176,11 +178,11 @@
         </fieldset>
         <fieldset class="ur" [ngClass]="{'person-with-agreement-show': personWithAgreement, 'person-with-agreement-hide': !personWithAgreement}">
           <label for="">Имя</label>
-          <input type="text">
+          <input type="text" [(ngModel)]="userName" name="userName">
           <label for="">Email</label>
-          <input type="text">
+          <input type="text" [(ngModel)]="email" name="email">
           <label for="">Телефон</label>
-          <input type="text">
+          <input type="text" [(ngModel)]="phone" name="phone">
         </fieldset>
       </div>
       <div class="registration-form-box">
@@ -194,14 +196,15 @@
         </fieldset>
         <fieldset class="ur" [ngClass]="{'person-with-agreement-show': personWithAgreement, 'person-with-agreement-hide': !personWithAgreement}">
           <label for="">Логин</label>
-          <input type="text">
+          <input type="text" [(ngModel)]="login" name="login">
           <label for="">Пароль</label>
-          <input type="text">
+          <input type="password" [(ngModel)]="password" name="password">
           <label for="">Пароль (подтвердить)</label>
-          <input type="text">
+          <input type="password" name="passwordRepeat">
         </fieldset>
       </div>
+      <input [ngClass]="{'person-with-agreement-show': !personWithAgreement, 'person-with-agreement-hide': personWithAgreement}" type="submit" value="Отправить">
+      <input [ngClass]="{'person-with-agreement-show': personWithAgreement, 'person-with-agreement-hide': !personWithAgreement}" type="submit" value="Отправить" (click)="regUrWith()">
     </fieldset>
-    <input type="submit" value="Отправить">
   </form>
 </div>
