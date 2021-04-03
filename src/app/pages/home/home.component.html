@@ -1,7 +1,7 @@
 <div class="home">
   <div class="home__row">
     <div class="home__col home__col_6">
-      <table>
+      <table class="agreement-table">
         <thead>
         <th>Договор</th>
         <th>Вид сделки</th>
@@ -13,7 +13,7 @@
           <td>№ 1234567 от 15.03.2021</td>
           <td>Курьерская доставка</td>
           <td>
-            <span>Заблокирован</span>
+            <span class="locked">Заблокирован</span>
           </td>
           <td>5</td>
         </tr>
@@ -21,15 +21,15 @@
           <td>№ 1234567 от 15.03.2021</td>
           <td>Экспресс - доставка документов</td>
           <td>
-            <span>Заблокирован</span>
+            <span class="unlocked">Отсутствует</span>
           </td>
           <td>5</td>
         </tr>
         <tr>
           <td>№ 1234567 от 15.03.2021</td>
-          <td>Экспресс - доставка грузов</td>
+          <td>Курьерская доставка</td>
           <td>
-            <span>Отсутствует</span>
+            <span class="locked">Заблокирован</span>
           </td>
           <td>5</td>
         </tr>
@@ -37,11 +37,19 @@
           <td>№ 1234567 от 15.03.2021</td>
           <td>Экспресс - доставка документов</td>
           <td>
-            <span>Отсутствует</span>
+            <span class="unlocked">Отсутствует</span>
           </td>
           <td>5</td>
         </tr>
         </tbody>
+        <tfoot>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        </tfoot>
       </table>
     </div>
     <div class="home__col home__col_6">
