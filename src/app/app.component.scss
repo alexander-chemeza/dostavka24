@@ -10,7 +10,8 @@
 .main-content {
   overflow: auto;
   box-sizing: border-box;
-  width: 87vw;
+  width: 100%;
+  max-width: calc(100% - 100px);
   height: 100%;
   background-color: #A070B5;
   border-radius: 10px;
