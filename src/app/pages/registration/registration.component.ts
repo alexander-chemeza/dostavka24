@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {HttpClient} from '@angular/common/http';
+import * as bcrypt from 'bcryptjs';
 
 export interface NewUrWithAgreement {
   companyName: string;
@@ -56,11 +57,12 @@ export class RegistrationComponent implements OnInit {
   }
 
   regUrWith() {
+    const salt = bcrypt.genSaltSync(10);
     const newUserUrWithAgreement: NewUrWithAgreement = {
       companyName: this.companyName,
       email: this.email,
       login: this.login,
-      password: this.password,
+      password: bcrypt.hashSync(this.password, 10),
       phone: this.phone,
       unp: this.unp,
       userName: this.userName,
