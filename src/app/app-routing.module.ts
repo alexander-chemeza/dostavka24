@@ -13,21 +13,23 @@ import {OrderComponent} from './pages/order/order.component';
 import {ProfileComponent} from './pages/profile/profile.component';
 import {TemplateComponent} from './pages/template/template.component';
 import {UsersComponent} from './pages/users/users.component';
+import {AuthGuard} from '../auth.guard';
 
 const routes: Routes = [
-  {path: '', component: LoginComponent},
+  {path: 'login', component: LoginComponent},
   {path: 'recover', component: RecoverComponent},
   {path: 'registration', component: RegistrationComponent},
   {path: 'calculator', component: CalculatorComponent},
-  {path: 'book', component: BookComponent},
-  {path: 'docs', component: DocsComponent},
-  {path: 'home', component: HomeComponent},
-  {path: 'instructions', component: InstructionsComponent},
-  {path: 'journal', component: JournalComponent},
-  {path: 'order', component: OrderComponent},
-  {path: 'profile', component: ProfileComponent},
-  {path: 'template', component: TemplateComponent},
-  {path: 'users', component: UsersComponent}
+  {path: 'book', component: BookComponent, canActivate: [AuthGuard]},
+  {path: 'docs', component: DocsComponent, canActivate: [AuthGuard]},
+  {path: 'home', component: HomeComponent, canActivate: [AuthGuard]},
+  {path: 'instructions', component: InstructionsComponent, canActivate: [AuthGuard]},
+  {path: 'journal', component: JournalComponent, canActivate: [AuthGuard]},
+  {path: 'order', component: OrderComponent, canActivate: [AuthGuard]},
+  {path: 'profile', component: ProfileComponent, canActivate: [AuthGuard]},
+  {path: 'template', component: TemplateComponent, canActivate: [AuthGuard]},
+  {path: 'users', component: UsersComponent, canActivate: [AuthGuard]},
+  {path: '', redirectTo: 'login', pathMatch: 'full'}
 ];
 
 @NgModule({

@@ -110,9 +110,13 @@
 
 .sidebar {
   height: 100%;
-  width: 100px;
+  width: 80px;
 
   transition: all .5s;
+
+  & .logo {
+    margin-bottom: 45px;
+  }
 
   &:hover, a:hover {
     width: 220px;
@@ -128,18 +132,52 @@
     color: #000000;
   }
 
-  &:hover a.active-menu img {
+  &:hover a.active-menu img.light-menu {
     display: flex;
   }
 
+  &:hover a.active-menu img.dark-menu {
+    display: none;
+  }
+
+  &:hover a img.small-logo {
+    display: none;
+    transition: all .5s;
+  }
+
+  &:hover a img.full-logo {
+    display: flex;
+    transition: all .5s;
+  }
+
+  & a img.full-logo {
+    display: none;
+    transition: all .5s;
+  }
+
+  & a img.small-logo {
+    display: flex;
+    transition: all .5s;
+  }
+
   & a {
-    padding: 22px 18px;
+    padding: 22px 22px;
     text-decoration: none;
     font-size: 14px;
     font-family: "Montserrat-SemiBold", sans-serif;
     color: #000000;
-    transition: .3s;
+    transition: .5s;
     display: flex;
+    white-space: nowrap;
+
+    & img {
+      margin-right: 18px;
+      transition: all .5s;
+    }
+
+    & img.dark-menu {
+      display: flex;
+    }
 
     &.active-menu {
       color: #FFFFFF;
@@ -148,8 +186,12 @@
       border-bottom-left-radius: 63px;
       position: relative;
 
-      & img {
+      & img.light-menu {
         display: flex;
+      }
+
+      & img.dark-menu {
+        display: none !important;
       }
 
       &:before,
@@ -159,18 +201,21 @@
         position: absolute;
         width: 10px;
         height: 10px;
+        transition: all .5s;
       }
 
       &:before {
         right: 0;
         bottom: 100%;
         background-image: radial-gradient(circle at 0 0, transparent 10px, #A070B5 10px);
+        transition: all .5s;
       }
 
       &:after {
         right: 0;
         top: 100%;
         background-image: radial-gradient(circle at 0 100%, transparent 10px, #A070B5 10px);
+        transition: all .5s;
       }
     }
 
@@ -182,4 +227,5 @@
 
 .link {
   display: none;
+  transition: all 0.5s;
 }
