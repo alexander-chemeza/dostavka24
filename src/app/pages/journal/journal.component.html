@@ -364,3 +364,75 @@
     </div>
   </div>
 </div>
+
+<!-- MODALS -->
+<div class="journal-modal-search-filters">
+  <h2 class="journal-modal-header">Выберите одну из дат</h2>
+  <form action="">
+    <div class="journal-modal-search-filters-box">
+      <div class="row">
+        <div class="col col-lg-6 col-lx-6 col-md-12 col-sm-12">
+          <label for="dispatch-date-from">Дата отправления с:</label>
+          <input type="date" name="dispatch-date-from" id="dispatch-date-from">
+
+          <label for="date-of-order-from">Дата создания заказа с:</label>
+          <input type="date" name="date-of-order-from" id="date-of-order-from">
+
+          <label for="date-of-order-access-from">Дата выдачи заказа с:</label>
+          <input type="date" name="date-of-order-access-from" id="date-of-order-access-from">
+
+          <label for="date-of-delivery-from">Дата доставки заказа с :</label>
+          <input type="date" name="date-of-delivery-from" id="date-of-delivery-from">
+        </div>
+        <div class="col col-lg-6 col-lx-6 col-md-12 col-sm-12">
+          <label for="dispatch-date-to">Дата отправления по:</label>
+          <input type="date" name="dispatch-date-to" id="dispatch-date-to">
+
+          <label for="date-of-order-to">Дата создания заказа по:</label>
+          <input type="date" name="date-of-order-to" id="date-of-order-to">
+
+          <label for="date-of-order-access-to">Дата выдачи заказа по:</label>
+          <input type="date" name="date-of-order-access-to" id="date-of-order-access-to">
+
+          <label for="date-of-delivery-to">Дата доставки заказа по :</label>
+          <input type="date" name="date-of-delivery-to" id="date-of-delivery-to">
+        </div>
+      </div>
+    </div>
+    <div class="journal-modal-search-filters-box">
+      <div class="row">
+        <div class="col col-lg-6 col-lx-6 col-md-12 col-sm-12">
+          <label for="sender">Отправитель :</label>
+          <input type="text" name="sender" id="sender">
+
+          <label for="place-from">Откуда( населенный пункт) :</label>
+          <input type="text" name="place-from" id="place-from">
+
+          <label for="service">Отправитель:</label>
+          <select name="service" id="service">
+            <option value="0">(все)</option>
+          </select>
+        </div>
+        <div class="col col-lg-6 col-lx-6 col-md-12 col-sm-12">
+          <label for="recipient">Получатель :</label>
+          <input type="text" name="recipient" id="recipient">
+
+          <label for="place-to">Куда( населенный пункт) :</label>
+          <input type="text" name="place-to" id="place-to">
+
+          <label for="service-status">Отправитель:</label>
+          <select name="service-status" id="service-status">
+            <option value="0">(все)</option>
+          </select>
+        </div>
+      </div>
+    </div>
+
+    <div class="journal-modal-search-filters-controls">
+      <div class="row">
+        <button class="clear">Очистить</button>
+        <input type="submit" value="Применить">
+      </div>
+    </div>
+  </form>
+</div>
