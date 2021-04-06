@@ -304,6 +304,41 @@
     }
   }
 
+  &-modal-columns {
+    width: 100%;
+    height: 100%;
+    max-width: 387px;
+    max-height: 606px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 30px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    background-color: #EEE6F5;
+
+    & .row {
+      margin-top: 15px;
+      align-items: center;
+
+      &:first-of-type {
+        margin-top: 0;
+      }
+    }
+
+    & label {
+      font-family: "Montserrat-Medium", sans-serif;
+      font-size: 14px;
+      color: #000000;
+      margin: 0;
+    }
+
+    & input[type='checkbox'] {
+      margin: 0 10px 0 0;
+    }
+  }
+
   &-modal-header {
     font-family: "Montserrat-SemiBold", sans-serif;
     font-size: 14px;
