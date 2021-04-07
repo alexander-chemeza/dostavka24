@@ -116,9 +116,10 @@
   display: flex;
   align-items: center;
   background-color: #ABCF37;
-  padding: 13px;
+  padding: 10.5px;
   box-sizing: border-box;
   border-radius: 39px;
+  transition: all .5s;
 
   & .link {
     margin-left: 18px;
@@ -128,6 +129,7 @@
 }
 
 a.order {
+  transition: all .5s;
   padding: 7px !important;
   flex-wrap: nowrap;
   //margin-left: 8px;
@@ -155,12 +157,12 @@ a.order img {
   transition: all .5s;
 
   & .logo {
-    padding-left: 0 !important;
+    padding-left: 10px !important;
     margin-bottom: 45px;
   }
 
   &:hover .new-order {
-    padding: 13px 21px;
+    padding: 10.5px 21px;
     //margin-left: -8px;
   }
 
@@ -180,6 +182,7 @@ a.order img {
 
   &:hover a.active-menu img.light-menu {
     display: flex;
+    align-items: center;
     margin-left: 8px;
   }
   // ЕСЛИ ЕЙ ПРИСПИЧИЛО СКРЫВАТЬ ЧЕРНЫЕ
@@ -212,11 +215,11 @@ a.order img {
   }
 
   & a.logo {
-    padding: 22px;
+    padding: 18px;
   }
 
   & a {
-    padding: 22px;
+    padding: 18px 22px;
     text-decoration: none;
     font-size: 14px;
     font-family: "Montserrat-SemiBold", sans-serif;
@@ -241,6 +244,8 @@ a.order img {
       border-top-left-radius: 63px;
       border-bottom-left-radius: 63px;
       position: relative;
+      display: flex;
+      align-items: center;
 
       & img.light-menu {
         display: flex;
