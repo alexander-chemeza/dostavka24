@@ -116,7 +116,12 @@
     <img src="../../../assets/img/sidebar/logo.svg" alt="" class="full-logo">
   </a>
   <!-- New order -->
-
+  <a routerLinkActive="active-menu" [routerLink]="['/order']" class="order">
+    <span class="new-order">
+      <img class="light-menu" src="../../../assets/img/sidebar/light/new-order.svg" alt="ico">
+      <span class="link" style="color: #ffffff">Новый заказ</span>
+    </span>
+  </a>
   <a routerLinkActive="active-menu" [routerLink]="['/home']" [routerLinkActiveOptions]="{exact: true}">
     <img class="light-menu" src="../../../assets/img/sidebar/light/home-light.svg" alt="ico">
     <img class="dark-menu" src="../../../assets/img/sidebar/dark/home-dark.svg" alt="ico">

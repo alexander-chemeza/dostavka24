@@ -108,6 +108,44 @@
 //  }
 //}
 
+#desktopLoggedSidebar .logo {
+  margin-bottom: 0;
+}
+
+.new-order {
+  display: flex;
+  align-items: center;
+  background-color: #ABCF37;
+  padding: 13px;
+  box-sizing: border-box;
+  border-radius: 39px;
+
+  & .link {
+    margin-left: 18px;
+    margin-right: 10px;
+    color: #FFFFFF;
+  }
+}
+
+a.order {
+  padding: 7px 15px !important;
+  flex-wrap: nowrap;
+
+  & .new-order img {
+    display: flex;
+    margin: 0 !important;
+  }
+
+  & .new-order .link {
+    margin-left: 18px;
+    color: #FFFFFF;
+  }
+}
+
+a.order img {
+  display: flex;
+}
+
 .sidebar {
   height: 100%;
   width: 80px;
@@ -116,6 +154,11 @@
 
   & .logo {
     margin-bottom: 45px;
+  }
+
+  &:hover .new-order {
+    padding: 13px 21px;
+    margin-left: -8px;
   }
 
   &:hover, a:hover {
@@ -135,8 +178,8 @@
   &:hover a.active-menu img.light-menu {
     display: flex;
   }
-
-  &:hover a.active-menu img.dark-menu {
+  // ЕСЛИ ЕЙ ПРИСПИЧИЛО СКРЫВАТЬ ЧЕРНЫЕ
+  &:hover a img.dark-menu {
     display: none;
   }
 
@@ -160,8 +203,12 @@
     transition: all .5s;
   }
 
+  & a.logo {
+    padding: 22px;
+  }
+
   & a {
-    padding: 22px 22px;
+    padding: 22px 30px;
     text-decoration: none;
     font-size: 14px;
     font-family: "Montserrat-SemiBold", sans-serif;
