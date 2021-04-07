@@ -71,10 +71,11 @@ fieldset {
     &-controls {
       margin-top: 20px;
       display: flex;
+      justify-content: space-between;
 
       &-col {
         display: flex;
-        width: 50%;
+        width: 47%;
       }
 
       &-warning {
