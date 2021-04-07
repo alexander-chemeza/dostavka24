@@ -109,7 +109,7 @@
 //}
 
 #desktopLoggedSidebar .logo {
-  margin-bottom: 0;
+  //margin-bottom: 0;
 }
 
 .new-order {
@@ -128,8 +128,10 @@
 }
 
 a.order {
-  padding: 7px 15px !important;
+  padding: 7px !important;
   flex-wrap: nowrap;
+  //margin-left: 8px;
+  margin-bottom: 25px;
 
   & .new-order img {
     display: flex;
@@ -153,12 +155,13 @@ a.order img {
   transition: all .5s;
 
   & .logo {
+    padding-left: 0 !important;
     margin-bottom: 45px;
   }
 
   &:hover .new-order {
     padding: 13px 21px;
-    margin-left: -8px;
+    //margin-left: -8px;
   }
 
   &:hover, a:hover {
@@ -177,10 +180,15 @@ a.order img {
 
   &:hover a.active-menu img.light-menu {
     display: flex;
+    margin-left: 8px;
   }
   // ЕСЛИ ЕЙ ПРИСПИЧИЛО СКРЫВАТЬ ЧЕРНЫЕ
   &:hover a img.dark-menu {
     display: none;
+  }
+
+  &:hover .order .new-order .light-menu {
+    margin-left: 0;
   }
 
   &:hover a img.small-logo {
@@ -208,7 +216,7 @@ a.order img {
   }
 
   & a {
-    padding: 22px 30px;
+    padding: 22px;
     text-decoration: none;
     font-size: 14px;
     font-family: "Montserrat-SemiBold", sans-serif;
@@ -216,6 +224,7 @@ a.order img {
     transition: .5s;
     display: flex;
     white-space: nowrap;
+    box-sizing: border-box;
 
     & img {
       margin-right: 18px;
