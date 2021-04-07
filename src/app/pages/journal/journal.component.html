@@ -370,7 +370,7 @@
 <!--<div class="journal-modal-search-filters">-->
 <!--  <h2 class="journal-modal-header">Выберите одну из дат</h2>-->
 <!--  <form action="">-->
-<!--    <div class="journal-modal-search-filters-box">-->
+<!--    <div class="journal-modal-box">-->
 <!--      <div class="row">-->
 <!--        <div class="col col-lg-6 col-lx-6 col-md-12 col-sm-12">-->
 <!--          <label for="dispatch-date-from">Дата отправления с:</label>-->
@@ -400,7 +400,7 @@
 <!--        </div>-->
 <!--      </div>-->
 <!--    </div>-->
-<!--    <div class="journal-modal-search-filters-box">-->
+<!--    <div class="journal-modal-box">-->
 <!--      <div class="row">-->
 <!--        <div class="col col-lg-6 col-lx-6 col-md-12 col-sm-12">-->
 <!--          <label for="sender">Отправитель :</label>-->
@@ -439,74 +439,115 @@
 <!--</div>-->
 
 <!-- Modal columns-->
-<div class="journal-modal-columns">
-  <div class="row">
-    <input type="checkbox" id="status" name="status">
-    <label for="status">Статус заявки</label>
-  </div>
+<!--<div class="journal-modal-columns">-->
+<!--  <div class="row">-->
+<!--    <input type="checkbox" id="status" name="status">-->
+<!--    <label for="status">Статус заявки</label>-->
+<!--  </div>-->
 
-  <div class="row">
-    <input type="checkbox" id="date-of-change" name="date-of-change">
-    <label for="date-of-change">Дата / время изменения статуса заявки</label>
-  </div>
+<!--  <div class="row">-->
+<!--    <input type="checkbox" id="date-of-change" name="date-of-change">-->
+<!--    <label for="date-of-change">Дата / время изменения статуса заявки</label>-->
+<!--  </div>-->
 
-  <div class="row">
-    <input type="checkbox" id="service-checkbox" name="service-checkbox">
-    <label for="service-checkbox">Услуга</label>
-  </div>
+<!--  <div class="row">-->
+<!--    <input type="checkbox" id="service-checkbox" name="service-checkbox">-->
+<!--    <label for="service-checkbox">Услуга</label>-->
+<!--  </div>-->
 
-  <div class="row">
-    <input type="checkbox" id="ttn" name="ttn">
-    <label for="ttn">ТТН</label>
-  </div>
+<!--  <div class="row">-->
+<!--    <input type="checkbox" id="ttn" name="ttn">-->
+<!--    <label for="ttn">ТТН</label>-->
+<!--  </div>-->
 
-  <div class="row">
-    <input type="checkbox" id="sender-checkbox" name="sender-checkbox">
-    <label for="sender-checkbox">Отправитель</label>
-  </div>
+<!--  <div class="row">-->
+<!--    <input type="checkbox" id="sender-checkbox" name="sender-checkbox">-->
+<!--    <label for="sender-checkbox">Отправитель</label>-->
+<!--  </div>-->
 
-  <div class="row">
-    <input type="checkbox" id="place-for-cargo" name="place-for-cargo">
-    <label for="place-for-cargo">Адрес выдачи груза</label>
-  </div>
+<!--  <div class="row">-->
+<!--    <input type="checkbox" id="place-for-cargo" name="place-for-cargo">-->
+<!--    <label for="place-for-cargo">Адрес выдачи груза</label>-->
+<!--  </div>-->
 
-  <div class="row">
-    <input type="checkbox" id="date-of-dispatch-checkbox" name="date-of-dispatch-checkbox">
-    <label for="date-of-dispatch-checkbox">Дата выдачи груза</label>
-  </div>
+<!--  <div class="row">-->
+<!--    <input type="checkbox" id="date-of-dispatch-checkbox" name="date-of-dispatch-checkbox">-->
+<!--    <label for="date-of-dispatch-checkbox">Дата выдачи груза</label>-->
+<!--  </div>-->
 
-  <div class="row">
-    <input type="checkbox" id="time-of-dispatch-from" name="time-of-dispatch-from">
-    <label for="time-of-dispatch-from">Время  выдачи груза с</label>
-  </div>
+<!--  <div class="row">-->
+<!--    <input type="checkbox" id="time-of-dispatch-from" name="time-of-dispatch-from">-->
+<!--    <label for="time-of-dispatch-from">Время  выдачи груза с</label>-->
+<!--  </div>-->
 
-  <div class="row">
-    <input type="checkbox" id="time-of-dispatch-to" name="time-of-dispatch-to">
-    <label for="time-of-dispatch-to">Время  выдачи груза по</label>
-  </div>
+<!--  <div class="row">-->
+<!--    <input type="checkbox" id="time-of-dispatch-to" name="time-of-dispatch-to">-->
+<!--    <label for="time-of-dispatch-to">Время  выдачи груза по</label>-->
+<!--  </div>-->
 
-  <div class="row">
-    <input type="checkbox" id="address-for-delivery" name="address-for-delivery">
-    <label for="address-for-delivery">Адрес доставки груза</label>
-  </div>
+<!--  <div class="row">-->
+<!--    <input type="checkbox" id="address-for-delivery" name="address-for-delivery">-->
+<!--    <label for="address-for-delivery">Адрес доставки груза</label>-->
+<!--  </div>-->
 
-  <div class="row">
-    <input type="checkbox" id="date-of-delivery-checkbox" name="date-of-delivery-checkbox">
-    <label for="date-of-delivery-checkbox">Дата доставки груза</label>
-  </div>
+<!--  <div class="row">-->
+<!--    <input type="checkbox" id="date-of-delivery-checkbox" name="date-of-delivery-checkbox">-->
+<!--    <label for="date-of-delivery-checkbox">Дата доставки груза</label>-->
+<!--  </div>-->
 
-  <div class="row">
-    <input type="checkbox" id="time-of-delivery-to" name="time-of-delivery-to">
-    <label for="time-of-delivery-to">Время доставки груза по</label>
-  </div>
+<!--  <div class="row">-->
+<!--    <input type="checkbox" id="time-of-delivery-to" name="time-of-delivery-to">-->
+<!--    <label for="time-of-delivery-to">Время доставки груза по</label>-->
+<!--  </div>-->
 
-  <div class="row">
-    <input type="checkbox" id="counter-of-place" name="counter-of-place">
-    <label for="counter-of-place">Кол-во грузовых мест</label>
-  </div>
+<!--  <div class="row">-->
+<!--    <input type="checkbox" id="counter-of-place" name="counter-of-place">-->
+<!--    <label for="counter-of-place">Кол-во грузовых мест</label>-->
+<!--  </div>-->
 
-  <div class="row">
-    <input type="checkbox" id="author" name="author">
-    <label for="author">Автор документа</label>
+<!--  <div class="row">-->
+<!--    <input type="checkbox" id="author" name="author">-->
+<!--    <label for="author">Автор документа</label>-->
+<!--  </div>-->
+<!--</div>-->
+
+<!-- Modal send-to-email -->
+<div class="journal-modal-email">
+  <h2 class="journal-modal-header">Отправить на Email</h2>
+  <div class="journal-modal-box">
+    <h3 class="journal-modal-box-header">Номера заказов:</h3>
+    <div class="row">
+      <span class="order-number">123345678900;</span>
+      <span class="order-number">123345678900;</span>
+      <span class="order-number">123345678900;</span>
+      <span class="order-number">123345678900;</span>
+      <span class="order-number">123345678900;</span>
+      <span class="order-number">123345678900;</span>
+      <span class="order-number">123345678900;</span>
+      <span class="order-number">123345678900;</span>
+      <span class="order-number">123345678900;</span>
+      <span class="order-number">123345678900;</span>
+      <span class="order-number">123345678900;</span>
+      <span class="order-number">123345678900;</span>
+    </div>
+  </div>
+  <div class="journal-modal-box">
+    <div class="row">
+      <div class="col col-lg-4 col-lx-4 col-md-12 col-sm-12">
+        <div class="row">
+          <h3 class="journal-modal-box-header">Формировать и отправлять на Email</h3>
+        </div>
+        <div class="row">
+          <input type="checkbox" name="blank" id="blank">
+          <label for="blank">Бланк</label>
+        </div>
+        <div class="row">
+          <input type="checkbox" name="stick" id="stick">
+          <label for="stick">Этикетки</label>
+        </div>
+      </div>
+      <div class="col col-lg-4 col-lx-4 col-md-12 col-sm-12"></div>
+      <div class="col col-lg-4 col-lx-4 col-md-12 col-sm-12"></div>
+    </div>
   </div>
 </div>
