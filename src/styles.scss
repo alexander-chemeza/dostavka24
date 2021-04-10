@@ -4,6 +4,8 @@
 @import '~bootstrap/scss/bootstrap';
 @import "../node_modules/ag-grid-community/dist/styles/ag-grid.css";
 @import "../node_modules/ag-grid-community/dist/styles/ag-theme-alpine.css";
+@import "~ag-grid-community/src/styles/ag-theme-alpine/sass/ag-theme-alpine-mixin";
+@import "./app/shared/custom-ag";
 
 body {
   margin: 0;
