@@ -12,13 +12,13 @@ import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { HomeComponent } from './pages/home/home.component';
 import { JournalComponent } from './pages/journal/journal.component';
 import { TemplateComponent } from './pages/template/template.component';
-import { BookComponent } from './pages/book/book.component';
 import { UsersComponent } from './pages/users/users.component';
 import { DocsComponent } from './pages/docs/docs.component';
 import { InstructionsComponent } from './pages/instructions/instructions.component';
 import { ProfileComponent } from './pages/profile/profile.component';
 import { OrderComponent } from './pages/order/order.component';
 import {RegistrationModule} from './pages/registration/registration.module';
+import {BookModule} from './pages/book/book.module';
 
 @NgModule({
   declarations: [
@@ -30,7 +30,6 @@ import {RegistrationModule} from './pages/registration/registration.module';
     HomeComponent,
     JournalComponent,
     TemplateComponent,
-    BookComponent,
     UsersComponent,
     DocsComponent,
     InstructionsComponent,
@@ -40,7 +39,8 @@ import {RegistrationModule} from './pages/registration/registration.module';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    RegistrationModule
+    RegistrationModule,
+    BookModule
   ],
   providers: [],
   bootstrap: [AppComponent]
