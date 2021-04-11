@@ -2,9 +2,15 @@
   border-radius: 10px;
 }
 
+.ag-header {
+  background-color: transparent !important;
+}
+
 .ag-header-viewport {
   background-color: #8D60B5;
-
+  overflow: hidden;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
 }
 
 .ag-header-cell-text {
@@ -93,4 +99,77 @@
 
 .ag-theme-alpine .ag-header-cell-resize::after {
   width: 0;
+}
+
+.ag-root-wrapper.ag-layout-normal.ag-ltr {
+  overflow: visible;
+}
+
+.ag-paging-panel {
+  width: 100%;
+  position: absolute;
+  top: 108%;
+  left: 0;
+  z-index: 999;
+  background-color: #B3A4C1;
+  padding: 30px;
+  border-radius: 10px;
+  box-sizing: border-box;
+  height: 90px;
+}
+
+.ag-theme-alpine .ag-paging-panel {
+  height: auto;
+}
+
+.ag-paging-row-summary-panel {
+  display: none;
+}
+
+.ag-theme-alpine .ag-paging-panel > * {
+  margin: 0 auto;
+}
+
+.ag-paging-description span {
+  &:first-of-type {
+    display: none;
+  }
+
+  &:nth-of-type(2) {
+    padding: 8px 24px;
+    box-sizing: border-box;
+    line-height: 1;
+    font-family: "Montserrat-SemiBold", sans-serif;
+    font-size: 14px;
+    color: #5A5A5A;
+    background-color: #FFFFFF;
+    border-radius: 7px;
+    border: 1px solid #E0E4E7;
+    margin-left: 10px;
+  }
+
+  &:nth-of-type(3) {
+    visibility: hidden;
+
+    &::after {
+      content: 'из';
+      visibility: visible;
+      font-family: "Montserrat-SemiBold", sans-serif;
+      font-size: 14px;
+      color: #FFFFFF;
+    }
+  }
+
+  &:nth-of-type(4) {
+    font-family: "Montserrat-SemiBold", sans-serif;
+    font-size: 14px;
+    color: #FFFFFF;
+
+    &::after {
+      font-family: "Montserrat-SemiBold", sans-serif;
+      font-size: 14px;
+      color: #FFFFFF;
+      content: ' страниц';
+    }
+  }
 }
