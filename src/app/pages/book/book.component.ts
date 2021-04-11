@@ -6,16 +6,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./book.component.scss']
 })
 export class BookComponent implements OnInit {
-  // Grid
   public gridApi;
   public gridColumnApi;
-  public autoGroupColumnDef;
   public defaultColDef;
   public rowSelection;
-  public rowGroupPanelShow;
-  public pivotPanelShow;
   public paginationPageSize;
-  public paginationNumberFormatter;
   // Columns
   public columnDefsContrAgent;
   public columnDefsAddress;
@@ -154,46 +149,43 @@ export class BookComponent implements OnInit {
       {contactName: 'Анна', employee: '-', phone: '+375 33 865 55 78', tel1: '+375 33 865 55 78', tel2: '+375 33 865 55 78', email: 'mail@mail.com'},
     ];
     // Grid
-    // this.defaultColDef = {
-    //   // editable: true,
-    //   // // enableRowGroup: true,
-    //   // // enablePivot: true,
-    //   // // enableValue: true,
-    //   sortable: true,
-    //   resizable: true,
-    //   filter: true,
-    //   flex: 1,
-    //   minWidth: 100,
-    // };
-    this.rowSelection = 'multiple';
-    this.rowGroupPanelShow = 'always';
-    this.pivotPanelShow = 'always';
-    this.paginationPageSize = 10;
-
     this.defaultColDef = {
       flex: 1,
       minWidth: 100,
       resizable: true,
-      icons: {check: '../../../assets/img/common/checked.svg'}
     };
-    this.paginationNumberFormatter = function(params) {
-      return '[' + params.value.toLocaleString() + ']';
-    };
-  }
-
-  onGridReady(params) {
-    this.gridApi = params.api;
-    this.gridColumnApi = params.columnApi;
-    console.log(this.gridApi);
+    this.rowSelection = 'multiple';
+    this.paginationPageSize = 10;
   }
 
   ngOnInit(): void {
   }
 
-  onPageSizeChanged(event) {
-    const value = event.target.value;
-    console.log(value);
-    this.gridApi.paginationSetPageSize(Number(value));
-    this.gridApi.paginationGetCurrentPage();
+  onGridReady(params) {
+    this.gridApi = params.api;
+    this.gridColumnApi = params.columnApi;
   }
+
+  onPaginationChanged(event, space: string) {
+    if(this.gridApi) {
+      setText(`#current-${space}`, this.gridApi.paginationGetCurrentPage() + 1);
+      setText(`#total-${space}`, this.gridApi.paginationGetTotalPages());
+    }
+  }
+
+  onBtNext() {
+    this.gridApi.paginationGoToNextPage();
+  }
+
+  onBtPrevious() {
+    this.gridApi.paginationGoToPreviousPage();
+  }
+
+  onUserPageGrid(event) {
+    this.gridApi.paginationSetPageSize(Number(event.target.value));
+  }
+}
+
+function setText(selector, text) {
+  document.querySelector(selector).innerHTML = text;
 }

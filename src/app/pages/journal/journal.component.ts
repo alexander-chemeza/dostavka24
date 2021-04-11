@@ -349,7 +349,6 @@ export class JournalComponent implements OnInit {
   onGridReady(params) {
     this.gridApi = params.api;
     this.gridColumnApi = params.columnApi;
-    console.log(this.gridApi);
   }
 
   onPaginationChanged(event) {
