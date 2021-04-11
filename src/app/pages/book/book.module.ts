@@ -2,18 +2,20 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import {SharedModule} from '../../shared/shared.module';
 import {BookComponent} from './book.component';
-import {AgGridModule} from 'ag-grid-angular';
-
-
+import {AdressModule} from './adress/adress.module';
+import {ContactsModule} from './contacts/contacts.module';
+import {ContragentsModule} from './contragents/contragents.module';
 
 @NgModule({
   declarations: [
-    BookComponent
+    BookComponent,
   ],
   imports: [
     CommonModule,
     SharedModule,
-    AgGridModule.withComponents([])
+    AdressModule,
+    ContactsModule,
+    ContragentsModule
   ]
 })
 export class BookModule { }
