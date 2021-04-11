@@ -1,5 +1,7 @@
+
+
 .journal {
-  position: relative;
+  //position: relative;
   width: 100%;
   height: 100%;
   padding: 30px 30px 0 30px;
@@ -11,9 +13,9 @@
   overflow: hidden;
 
   & .main-table {
-    height: 75%;
+    height: 70%;
     width: 100%;
-    overflow: auto;
+    //overflow: auto;
   }
 
   & button {
@@ -168,6 +170,7 @@
   }
 
   & .row .search {
+    margin-top: 0;
     width: 89%;
     max-width: 100%;
     background-color: #ffffff;
@@ -372,4 +375,17 @@
     margin: 0;
     padding: 0;
   }
+}
+
+.journal .main-table .ag-theme-alpine .ag-root-wrapper .ag-paging-panel {
+  width: 100% !important;
+  position: absolute !important;
+  top: 100% !important;
+  left: 0 !important;
+  z-index: 999 !important;
+  background-color: #B3A4C1;
+  padding: 30px;
+  border-radius: 10px;
+  box-sizing: border-box;
+  height: 90px;
 }
