@@ -12,6 +12,7 @@ export class JournalComponent implements OnInit {
   public columnDefs;
   public defaultColDef;
   public rowSelection;
+  public paginationPageSize;
 
   constructor() {
     this.columnDefs = [
@@ -339,6 +340,7 @@ export class JournalComponent implements OnInit {
       resizable: true,
     };
     this.rowSelection = 'multiple';
+    this.paginationPageSize = 20;
   }
 
   ngOnInit(): void {
@@ -350,4 +352,26 @@ export class JournalComponent implements OnInit {
     console.log(this.gridApi);
   }
 
+  onPaginationChanged(event) {
+    if(this.gridApi) {
+      setText('#current', this.gridApi.paginationGetCurrentPage() + 1);
+      setText('#total', this.gridApi.paginationGetTotalPages());
+    }
+  }
+
+  onBtNext() {
+    this.gridApi.paginationGoToNextPage();
+  }
+
+  onBtPrevious() {
+    this.gridApi.paginationGoToPreviousPage();
+  }
+
+  onUserPageGrid(event) {
+    this.gridApi.paginationSetPageSize(Number(event.target.value));
+  }
+}
+
+function setText(selector, text) {
+  document.querySelector(selector).innerHTML = text;
 }

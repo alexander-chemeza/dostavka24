@@ -21,13 +21,17 @@
     <ag-grid-angular
       style="width: 100%; height: 100%; overflow: visible"
       class="ag-theme-alpine"
+      [suppressPaginationPanel]="true"
+      [debug]="true"
+      [suppressScrollOnNewData]="true"
       [rowData]="rowData"
       [columnDefs]="columnDefs"
       [defaultColDef]="defaultColDef"
       [suppressRowClickSelection]="true"
       [rowSelection]="rowSelection"
       [pagination]="true"
-      [paginationAutoPageSize]="true"
+      [paginationPageSize]="paginationPageSize"
+      (paginationChanged)="onPaginationChanged($event)"
       (gridReady)="onGridReady($event)"
     >
     </ag-grid-angular>
@@ -376,6 +380,19 @@
 <!--      <div class="next-page"></div>-->
 <!--    </div>-->
 <!--  </div>-->
+  <div style="width: 100%; display: flex; justify-content: space-between; align-items: center">
+    <div class="num-of-items">
+      <span>На странице</span>
+      <input (input)="onUserPageGrid($event)" style="max-width: 150px" type="number" value="10">
+    </div>
+    <div class="page-controls">
+      <span (click)="onBtPrevious()" class="page-prev">&lt;</span>
+      <span id="current" class="page-current"></span>
+      <span class="page-of">из</span>
+      <span id="total" class="page-total"></span>
+      <span (click)="onBtNext()" class="page-next">&gt;</span>
+    </div>
+  </div>
 </div>
 
 <!-- MODALS -->
