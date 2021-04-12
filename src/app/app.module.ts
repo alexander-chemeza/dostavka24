@@ -9,7 +9,6 @@ import { RegistrationComponent } from './pages/registration/registration.compone
 import { CalculatorComponent } from './pages/calculator/calculator.component';
 
 import { SidebarComponent } from './components/sidebar/sidebar.component';
-import { HomeComponent } from './pages/home/home.component';
 import { TemplateComponent } from './pages/template/template.component';
 import { UsersComponent } from './pages/users/users.component';
 import { DocsComponent } from './pages/docs/docs.component';
@@ -19,6 +18,7 @@ import { OrderComponent } from './pages/order/order.component';
 import {RegistrationModule} from './pages/registration/registration.module';
 import {BookModule} from './pages/book/book.module';
 import {JournalModule} from './pages/journal/journal.module';
+import {HomeModule} from './pages/home/home.module';
 
 @NgModule({
   declarations: [
@@ -27,7 +27,6 @@ import {JournalModule} from './pages/journal/journal.module';
     LoginComponent,
     RecoverComponent,
     CalculatorComponent,
-    HomeComponent,
     TemplateComponent,
     UsersComponent,
     DocsComponent,
@@ -40,6 +39,7 @@ import {JournalModule} from './pages/journal/journal.module';
     AppRoutingModule,
     RegistrationModule,
     BookModule,
+    HomeModule,
     JournalModule
   ],
   providers: [],

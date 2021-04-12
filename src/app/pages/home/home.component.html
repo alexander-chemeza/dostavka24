@@ -85,79 +85,35 @@
   </div>
   <div class="home__row home__row_grey">
     <h3 class="home__header">Журнал заказов ( кратко)</h3>
-    <table>
-      <thead>
-        <th style="width: 114px">Номер</th>
-        <th style="width: 147px;">Статусы</th>
-        <th style="width: 124px">Дата выдачи груза</th>
-        <th style="width: 124px">Дата поставки груза</th>
-        <th style="width: 158px">Услуга</th>
-        <th style="width: 165px">Отправитель</th>
-        <th style="width: 371px">Адрес выдачи груза</th>
-        <th style="width: 287px">Адрес доставки груза</th>
-      </thead>
-      <tbody>
-      <tr>
-        <td style="width: 114px">12345678910</td>
-        <td style="width: 147px;">Груз</td>
-        <td style="width: 124px">21.10.2020</td>
-        <td style="width: 124px">23:30</td>
-        <td style="width: 158px">Экспресс-доставка грузов</td>
-        <td style="width: 165px">ООО "НТТ Импорт"</td>
-        <td style="width: 371px">АМИНСКАЯ ОБЛАСТЬ, Минский, д. Большое Стиклево, ТЕР. РАЙОН Д. БОЛЬШОЕ СТИКЛЕВО, д. 40, корп. 2</td>
-        <td style="width: 287px">г. Брест, УЛ. КАТИН БОР, д. 103</td>
-      </tr>
-      <tr>
-        <td>12345678910</td>
-        <td>Груз</td>
-        <td>21.10.2020</td>
-        <td>23:30</td>
-        <td>Экспресс-доставка грузов</td>
-        <td>ООО "НТТ Импорт"</td>
-        <td>АМИНСКАЯ ОБЛАСТЬ, Минский, д. Большое Стиклево, ТЕР. РАЙОН Д. БОЛЬШОЕ СТИКЛЕВО, д. 40, корп. 2</td>
-        <td>г. Брест, УЛ. КАТИН БОР, д. 103</td>
-      </tr>
-      <tr>
-        <td>12345678910</td>
-        <td>Груз</td>
-        <td>21.10.2020</td>
-        <td>23:30</td>
-        <td>Экспресс-доставка грузов</td>
-        <td>ООО "НТТ Импорт"</td>
-        <td>АМИНСКАЯ ОБЛАСТЬ, Минский, д. Большое Стиклево, ТЕР. РАЙОН Д. БОЛЬШОЕ СТИКЛЕВО, д. 40, корп. 2</td>
-        <td>г. Брест, УЛ. КАТИН БОР, д. 103</td>
-      </tr>
-      <tr>
-        <td>12345678910</td>
-        <td>Груз</td>
-        <td>21.10.2020</td>
-        <td>23:30</td>
-        <td>Экспресс-доставка грузов</td>
-        <td>ООО "НТТ Импорт"</td>
-        <td>АМИНСКАЯ ОБЛАСТЬ, Минский, д. Большое Стиклево, ТЕР. РАЙОН Д. БОЛЬШОЕ СТИКЛЕВО, д. 40, корп. 2</td>
-        <td>г. Брест, УЛ. КАТИН БОР, д. 103</td>
-      </tr>
-      <tr>
-        <td>12345678910</td>
-        <td>Груз</td>
-        <td>21.10.2020</td>
-        <td>23:30</td>
-        <td>Экспресс-доставка грузов</td>
-        <td>ООО "НТТ Импорт"</td>
-        <td>АМИНСКАЯ ОБЛАСТЬ, Минский, д. Большое Стиклево, ТЕР. РАЙОН Д. БОЛЬШОЕ СТИКЛЕВО, д. 40, корп. 2</td>
-        <td>г. Брест, УЛ. КАТИН БОР, д. 103</td>
-      </tr>
-      <tr>
-        <td>12345678910</td>
-        <td>Груз</td>
-        <td>21.10.2020</td>
-        <td>23:30</td>
-        <td>Экспресс-доставка грузов</td>
-        <td>ООО "НТТ Импорт"</td>
-        <td>АМИНСКАЯ ОБЛАСТЬ, Минский, д. Большое Стиклево, ТЕР. РАЙОН Д. БОЛЬШОЕ СТИКЛЕВО, д. 40, корп. 2</td>
-        <td>г. Брест, УЛ. КАТИН БОР, д. 103</td>
-      </tr>
-      </tbody>
-    </table>
+    <ag-grid-angular
+      style="width: 100%; height: 100%; overflow: visible"
+      class="ag-theme-alpine"
+      [suppressPaginationPanel]="true"
+      [debug]="true"
+      [suppressScrollOnNewData]="true"
+      [rowData]="rowData"
+      [columnDefs]="columnDefs"
+      [defaultColDef]="defaultColDef"
+      [suppressRowClickSelection]="true"
+      [rowSelection]="rowSelection"
+      [pagination]="true"
+      [paginationPageSize]="paginationPageSize"
+      (paginationChanged)="onPaginationChanged($event, 'address')"
+      (gridReady)="onGridReady($event)"
+    >
+    </ag-grid-angular>
+    <div style="width: 100%; display: flex; justify-content: space-between; align-items: center">
+      <div class="num-of-items">
+        <span>На странице</span>
+        <input (input)="onUserPageGrid($event)" style="max-width: 150px" type="number" value="10">
+      </div>
+      <div class="page-controls">
+        <span (click)="onBtPrevious()" class="page-prev">&lt;</span>
+        <span id="current-address" class="page-current"></span>
+        <span class="page-of">из</span>
+        <span id="total-address" class="page-total"></span>
+        <span (click)="onBtNext()" class="page-next">&gt;</span>
+      </div>
+    </div>
   </div>
 </div>
