@@ -1,1 +1,45 @@
-<p>template works!</p>
+<div class="template">
+  <div class="dark-grey-box">
+    <div class="row">
+      <div class="col col-lg-10 col-lx-10 col-md-10 col-sm-10 p-0">
+        <input class="mt-0" type="search" placeholder="Поиск">
+      </div>
+      <div class="col col-lg-2 col-lx-2 col-md-2 col-sm-2 pl-4 pr-0">
+        <button class="button white-btn filter-btn">Фильтр</button>
+      </div>
+    </div>
+    <div class="row main-table">
+      <ag-grid-angular
+        style="width: 100%; height: 100%; overflow: visible"
+        class="ag-theme-alpine"
+        [suppressPaginationPanel]="true"
+        [debug]="true"
+        [suppressScrollOnNewData]="true"
+        [rowData]="rowData"
+        [columnDefs]="columnDefs"
+        [defaultColDef]="defaultColDef"
+        [suppressRowClickSelection]="true"
+        [rowSelection]="rowSelection"
+        [pagination]="true"
+        [paginationPageSize]="paginationPageSize"
+        (paginationChanged)="onPaginationChanged($event)"
+        (gridReady)="onGridReady($event)"
+      >
+      </ag-grid-angular>
+    </div>
+    <div class="ag-navigation-custom">
+      <div class="num-of-items">
+        <span>На странице: </span>
+        <input (input)="onUserPageGrid($event)" type="number" value="10">
+      </div>
+      <div class="page-controls">
+        <span (click)="onBtPrevious()" class="page-prev"></span>
+        <span id="current" class="page-current"></span>
+        <span class="page-of">из</span>
+        <span id="total" class="page-total"></span>
+        <span class="page-of">страниц</span>
+        <span (click)="onBtNext()" class="page-next"></span>
+      </div>
+    </div>
+  </div>
+</div>

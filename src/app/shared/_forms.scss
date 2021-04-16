@@ -1,3 +1,9 @@
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
 input[type='text'],
 input[type='tel'],
 input[type='email'],
@@ -75,6 +81,15 @@ label {
   padding: 12px 23px;
   box-sizing: border-box;
   line-height: 1.2;
+
+  &.filter-btn {
+    width: 100%;
+    height: 100%;
+    background-image: url("../../assets/img/common/add-dark.svg");
+    background-repeat: no-repeat;
+    background-position-y: 50%;
+    background-position-x: 75%;
+  }
 
   &.white-btn {
     color: #000000;
