@@ -14,6 +14,9 @@ import {ProfileComponent} from './pages/profile/profile.component';
 import {TemplateComponent} from './pages/template/template.component';
 import {UsersComponent} from './pages/users/users.component';
 import {AuthGuard} from '../auth.guard';
+import {DeliveryComponent} from './pages/template/delivery/delivery.component';
+import {WeightComponent} from './pages/template/weight/weight.component';
+import {OptionsComponent} from './pages/template/options/options.component';
 
 const routes: Routes = [
   // {path: 'login', component: LoginComponent},
@@ -41,7 +44,12 @@ const routes: Routes = [
   {path: 'journal', component: JournalComponent},
   {path: 'order', component: OrderComponent},
   {path: 'profile', component: ProfileComponent},
-  {path: 'template', component: TemplateComponent},
+  {path: 'template', component: TemplateComponent, pathMatch: 'full', children: [
+      { path: '', component: TemplateComponent },
+      {path: 'delivery/', component: DeliveryComponent},
+      {path: 'weight/', component: WeightComponent},
+      {path: 'options/', component: OptionsComponent}
+    ]},
   {path: 'users', component: UsersComponent},
   {path: '', redirectTo: 'login', pathMatch: 'full'}
 ];
