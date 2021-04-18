@@ -44,12 +44,10 @@ const routes: Routes = [
   {path: 'journal', component: JournalComponent},
   {path: 'order', component: OrderComponent},
   {path: 'profile', component: ProfileComponent},
-  {path: 'template', component: TemplateComponent, pathMatch: 'full', children: [
-      { path: '', component: TemplateComponent },
-      {path: 'delivery/', component: DeliveryComponent},
-      {path: 'weight/', component: WeightComponent},
-      {path: 'options/', component: OptionsComponent}
-    ]},
+  {path: 'template', component: TemplateComponent},
+  {path: 'template/delivery', component: DeliveryComponent},
+  {path: 'template/weight', component: WeightComponent},
+  {path: 'template/options', component: OptionsComponent},
   {path: 'users', component: UsersComponent},
   {path: '', redirectTo: 'login', pathMatch: 'full'}
 ];
