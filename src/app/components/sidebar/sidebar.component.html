@@ -83,34 +83,34 @@
 
 <!--</nav>-->
 
-<!--<div id="desktopUnloggedSidebar" class="sidebar">-->
-<!--  <a class="logo" [routerLink]="['login']">-->
-<!--    <img src="../../../assets/img/sidebar/logo-small.svg" alt="" class="small-logo">-->
-<!--    <img src="../../../assets/img/sidebar/logo.svg" alt="" class="full-logo">-->
-<!--  </a>-->
-<!--  <a routerLinkActive="active-menu" [routerLink]="['login']" [routerLinkActiveOptions]="{exact: true}">-->
-<!--    <img class="light-menu" src="../../../assets/img/signing/log-in.svg" alt="">-->
-<!--    <img src="../../../assets/img/signing/log-in-dark.svg" alt="" class="dark-menu">-->
-<!--    <span class="link">Вход</span>-->
-<!--  </a>-->
-<!--  <a routerLinkActive="active-menu" [routerLink]="['/recover']">-->
-<!--    <img class="light-menu" src="../../../assets/img/signing/recover.svg" alt="">-->
-<!--    <img src="../../../assets/img/signing/recover-dark.svg" alt="" class="dark-menu">-->
-<!--    <span class="link">Забыли пароль</span>-->
-<!--  </a>-->
-<!--  <a routerLinkActive="active-menu" [routerLink]="['/registration']">-->
-<!--    <img class="light-menu" src="../../../assets/img/signing/registration.svg" alt="">-->
-<!--    <img src="../../../assets/img/signing/registration-dark.svg" alt="" class="dark-menu">-->
-<!--    <span class="link">Регистрация</span>-->
-<!--  </a>-->
-<!--  <a routerLinkActive="active-menu" routerLink="/calculator">-->
-<!--    <img class="light-menu" src="../../../assets/img/sidebar/light/calc-light.svg" alt="">-->
-<!--    <img src="../../../assets/img/sidebar/dark/calc-dark.svg" alt="" class="dark-menu">-->
-<!--    <span class="link">Калькулятор</span>-->
-<!--  </a>-->
-<!--</div>-->
+<div *ngIf="!state" id="desktopUnloggedSidebar" class="sidebar">
+  <a class="logo" [routerLink]="['login']">
+    <img src="../../../assets/img/sidebar/logo-small.svg" alt="" class="small-logo">
+    <img src="../../../assets/img/sidebar/logo.svg" alt="" class="full-logo">
+  </a>
+  <a routerLinkActive="active-menu" [routerLink]="['login']" [routerLinkActiveOptions]="{exact: true}">
+    <img class="light-menu" src="../../../assets/img/signing/log-in.svg" alt="">
+    <img src="../../../assets/img/signing/log-in-dark.svg" alt="" class="dark-menu">
+    <span class="link">Вход</span>
+  </a>
+  <a routerLinkActive="active-menu" [routerLink]="['/recover']">
+    <img class="light-menu" src="../../../assets/img/signing/recover.svg" alt="">
+    <img src="../../../assets/img/signing/recover-dark.svg" alt="" class="dark-menu">
+    <span class="link">Забыли пароль</span>
+  </a>
+  <a routerLinkActive="active-menu" [routerLink]="['/registration']">
+    <img class="light-menu" src="../../../assets/img/signing/registration.svg" alt="">
+    <img src="../../../assets/img/signing/registration-dark.svg" alt="" class="dark-menu">
+    <span class="link">Регистрация</span>
+  </a>
+  <a routerLinkActive="active-menu" routerLink="/calculator">
+    <img class="light-menu" src="../../../assets/img/sidebar/light/calc-light.svg" alt="">
+    <img src="../../../assets/img/sidebar/dark/calc-dark.svg" alt="" class="dark-menu">
+    <span class="link">Калькулятор</span>
+  </a>
+</div>
 
-<div id="desktopLoggedSidebar" class="sidebar">
+<div *ngIf="state" id="desktopLoggedSidebar" class="sidebar">
   <a class="logo" [routerLink]="['/home']">
     <img src="../../../assets/img/sidebar/logo-small.svg" alt="" class="small-logo">
     <img src="../../../assets/img/sidebar/logo.svg" alt="" class="full-logo">
