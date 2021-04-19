@@ -3,9 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app.component';
-import { LoginComponent } from './pages/login/login.component';
 import { RecoverComponent } from './pages/recover/recover.component';
-import { RegistrationComponent } from './pages/registration/registration.component';
 import { CalculatorComponent } from './pages/calculator/calculator.component';
 
 import { SidebarComponent } from './components/sidebar/sidebar.component';
@@ -19,12 +17,12 @@ import {BookModule} from './pages/book/book.module';
 import {JournalModule} from './pages/journal/journal.module';
 import {HomeModule} from './pages/home/home.module';
 import {TemplateModule} from './pages/template/template.module';
+import {LoginModule} from "./pages/login/login.module";
 
 @NgModule({
   declarations: [
     AppComponent,
     SidebarComponent,
-    LoginComponent,
     RecoverComponent,
     CalculatorComponent,
     UsersComponent,
@@ -40,7 +38,8 @@ import {TemplateModule} from './pages/template/template.module';
     BookModule,
     HomeModule,
     JournalModule,
-    TemplateModule
+    TemplateModule,
+    LoginModule
   ],
   providers: [],
   bootstrap: [AppComponent]
