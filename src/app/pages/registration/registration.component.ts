@@ -62,7 +62,7 @@ export class RegistrationComponent implements OnInit {
       companyName: this.companyName,
       email: this.email,
       login: this.login,
-      password: bcrypt.hashSync(this.password, 10),
+      password: this.password,
       phone: this.phone,
       unp: this.unp,
       userName: this.userName,
