@@ -1,10 +1,21 @@
 import { Injectable } from '@angular/core';
-import {HttpClient, HttpHeaders} from "@angular/common/http";
+import {HttpClient, HttpHeaders} from '@angular/common/http';
 
 // login user data interface
 interface User {
   name: string;
   role: string;
+}
+
+// Registration of entity with agreement
+export interface EntityWithAgreement {
+  companyName: string;
+  email: string;
+  login: string;
+  password: string;
+  phone: string;
+  unp: string;
+  userName: string;
 }
 
 @Injectable({
@@ -24,5 +35,9 @@ export class RestapiService {
 
     // GET method to login, that returns an object {"name": "value", role: "value"}
     return this.http.get<User>('http://localhost:8080/user/getUserInfo', {headers, responseType: 'json'});
+  }
+
+  public registerEntityWithAgreement(data: EntityWithAgreement) {
+    return this.http.post('http://localhost:8080/registration', data);
   }
 }

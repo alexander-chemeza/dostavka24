@@ -1,16 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {HttpClient} from '@angular/common/http';
-import * as bcrypt from 'bcryptjs';
-
-export interface NewUrWithAgreement {
-  companyName: string;
-  email: string;
-  login: string;
-  password: string;
-  phone: string;
-  unp: string;
-  userName: string;
-}
+import {EntityWithAgreement, RestapiService} from '../../restapi.service';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-registration',
@@ -18,28 +8,34 @@ export interface NewUrWithAgreement {
   styleUrls: ['./registration.component.scss']
 })
 export class RegistrationComponent implements OnInit {
-
+  // Used for the forms switching
   agreement = false;
   personNoAgreement = false;
   personWithAgreement = false;
 
   // Entity user with agreement options
-  companyName = '';
-  email = '';
-  login = '';
-  password = '';
-  phone = '';
-  unp = '';
-  userName = '';
+  companyName: string;
+  email: string;
+  login: string;
+  password: string;
+  phone: string;
+  unp: string;
+  userName: string;
 
-  constructor(private http: HttpClient) {
+  constructor(private service: RestapiService, private router: Router) {
+    this.companyName = '';
+    this.email = '';
+    this.password = '';
+    this.phone = '';
+    this.unp = '';
+    this.userName = '';
   }
 
   ngOnInit(): void {
   }
 
   toggleNoPerson(event) {
-    const controls = document.getElementsByClassName('no-agreement-control') as HTMLCollectionOf<HTMLLinkElement>
+    const controls = document.getElementsByClassName('no-agreement-control') as HTMLCollectionOf<HTMLLinkElement>;
     for (const c of Array.from(controls)) {
       c.disabled = false;
     }
@@ -48,7 +44,7 @@ export class RegistrationComponent implements OnInit {
   }
 
   toggleWithPerson(event) {
-    const controls = document.getElementsByClassName('with-agreement-control') as HTMLCollectionOf<HTMLLinkElement>
+    const controls = document.getElementsByClassName('with-agreement-control') as HTMLCollectionOf<HTMLLinkElement>;
     for (const c of Array.from(controls)) {
       c.disabled = false;
     }
@@ -57,8 +53,7 @@ export class RegistrationComponent implements OnInit {
   }
 
   regUrWith() {
-    const salt = bcrypt.genSaltSync(10);
-    const newUserUrWithAgreement: NewUrWithAgreement = {
+    const newUserUrWithAgreement: EntityWithAgreement = {
       companyName: this.companyName,
       email: this.email,
       login: this.login,
@@ -68,9 +63,13 @@ export class RegistrationComponent implements OnInit {
       userName: this.userName,
     };
 
-    this.http.post('http://localhost:8080/registration', newUserUrWithAgreement)
+    console.log(newUserUrWithAgreement);
+
+    this.service.registerEntityWithAgreement(newUserUrWithAgreement)
       .subscribe(response => {
-        console.log(response);
+        if (response === '0') {
+          this.router.navigate(['login']);
+        }
       });
   }
 }
