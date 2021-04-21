@@ -55,11 +55,12 @@ label {
 
   &:first-of-type {
     margin-top: 0;
+    margin-bottom: 0;
   }
 }
 
 .grey-box {
-  padding: 30px;
+  padding: 30px !important;
   background-color: #EEE6F5;
   border-radius: 10px;
   box-sizing: border-box;
@@ -69,6 +70,10 @@ label {
 
   &:first-of-type {
     margin-top: 0;
+  }
+
+  &_inline {
+    flex-direction: row;
   }
 }
 
@@ -108,5 +113,31 @@ label {
     &:hover {
       background-color: #7839b3;
     }
+  }
+}
+
+select {
+  width: 100%;
+  font-family: "Montserrat-Medium", sans-serif;
+  color: #000000;
+  font-size: 14px;
+  padding: 12px 40px 12px 12px;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  margin-top: 12px !important;
+  background-color: #FFFFFF;
+  -webkit-appearance: none;
+  background-image: url("../../assets/img/common/select.svg");
+  background-repeat: no-repeat;
+  background-position-y: 50%;
+  background-position-x: 95%;
+
+  & option {
+    font-family: "Montserrat-Medium", sans-serif;
+    color: #000000;
+    font-size: 14px;
+    padding: 12px;
+    box-sizing: border-box;
   }
 }
