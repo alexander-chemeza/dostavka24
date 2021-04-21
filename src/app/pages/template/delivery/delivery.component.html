@@ -6,17 +6,29 @@
         <input id="name" name="name" type="text" placeholder="Наименование">
       </div>
       <div class="col col-lg-3 col-lx-3 col-md-12 col-sm-12">
-        <label for="type">Тип услуги</label>
-        <select class="form-select form-select-lg" aria-label=".form-select-lg example" name="type" id="type">
-          <option value="0">Экспресс-доставка грузов</option>
-          <option value="0">Курьерская доставка</option>
-        </select>
+        <label for="service-type">Тип услуги</label>
+<!--        <select class="form-select form-select-lg" aria-label=".form-select-lg example" name="type" id="type">-->
+<!--          <option value="0">Экспресс-доставка грузов</option>-->
+<!--          <option value="0">Курьерская доставка</option>-->
+<!--        </select>-->
+        <mat-form-field floatLabel="never" appearance="none">
+          <mat-select [(ngModel)]="serviceType">
+            <mat-option *ngFor="let service of serviceTypes" [value]="service.value">
+              {{service.viewValue}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+
       </div>
       <div class="col col-lg-3 col-lx-3 col-md-12 col-sm-12">
         <label for="delivery-type">Тип доставки</label>
-        <select name="delivery-type" id="delivery-type">
-          <option value="0">Дверь/дверь</option>
-        </select>
+        <mat-form-field floatLabel="never" appearance="none">
+          <mat-select [(ngModel)]="deliveryType">
+            <mat-option *ngFor="let delivery of deliveryTypes" [value]="delivery.value">
+              {{delivery.viewValue}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
       </div>
     </div>
   </div>

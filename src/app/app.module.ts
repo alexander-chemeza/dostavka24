@@ -18,6 +18,7 @@ import {JournalModule} from './pages/journal/journal.module';
 import {HomeModule} from './pages/home/home.module';
 import {TemplateModule} from './pages/template/template.module';
 import {LoginModule} from "./pages/login/login.module";
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -39,7 +40,8 @@ import {LoginModule} from "./pages/login/login.module";
     HomeModule,
     JournalModule,
     TemplateModule,
-    LoginModule
+    LoginModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
