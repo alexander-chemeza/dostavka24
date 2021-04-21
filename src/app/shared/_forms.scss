@@ -109,9 +109,19 @@ label {
   &.active-btn {
     background-color: #8D60B5;
     color: #FFFFFF;
+    transition: all .5s;
 
     &:hover {
       background-color: #7839b3;
+    }
+  }
+
+  &.inactive-btn {
+    color: rgba(0, 0, 0, 0.5);
+    cursor: default;
+
+    &:hover {
+      background-color: #FFFFFF;
     }
   }
 }

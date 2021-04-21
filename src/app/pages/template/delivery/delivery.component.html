@@ -7,10 +7,6 @@
       </div>
       <div class="col col-lg-3 col-lx-3 col-md-12 col-sm-12">
         <label for="service-type">Тип услуги</label>
-<!--        <select class="form-select form-select-lg" aria-label=".form-select-lg example" name="type" id="type">-->
-<!--          <option value="0">Экспресс-доставка грузов</option>-->
-<!--          <option value="0">Курьерская доставка</option>-->
-<!--        </select>-->
         <mat-form-field floatLabel="never" appearance="none">
           <mat-select [(ngModel)]="serviceType">
             <mat-option *ngFor="let service of serviceTypes" [value]="service.value">
@@ -34,23 +30,23 @@
   </div>
   <div class="template-edit__map row">
     <hr>
-    <div class="col col-lg-6 col-lx-6 col-md-12 col-sm-12">
+    <div class="col col-lg-6 col-lx-6 col-md-12 col-sm-12 pl-0">
       <div class="row">
-        <div class="col col-lg-6 col-lx-6 col-md-12 col-sm-12">
-          <button>Доставка</button>
+        <div class="col col-lg-6 col-lx-6 col-md-12 col-sm-12 pl-0">
+          <button class="button active-btn" style="width: 100%">Доставка</button>
         </div>
         <div class="col col-lg-6 col-lx-6 col-md-12 col-sm-12">
-          <button>Вес, габариты</button>
+          <button class="button white-btn inactive-btn" style="width: 100%">Вес, габариты</button>
         </div>
       </div>
     </div>
-    <div class="col col-lg-6 col-lx-6 col-md-12 col-sm-12" style="display: flex; justify-content: flex-end">
-      <button>Дополнительные услуги</button>
+    <div class="col col-lg-6 col-lx-6 col-md-12 col-sm-12 pr-0" style="display: flex; justify-content: flex-end">
+      <button class="button white-btn inactive-btn" style="width: 50%">Дополнительные услуги</button>
     </div>
   </div>
 
   <div class="template-edit__main row template-edit__main__delivery">
-    <div class="col col-lg-6 col-lx-6 col-md-12 col-sm-12">
+    <div class="col col-lg-6 col-lx-6 col-md-12 col-sm-12 pl-0">
       <div class="grey-box">
         <div class="row">
           <div class="col col-lg-11 col-lx-11 col-md-11 col-sm-11">
@@ -112,7 +108,7 @@
         </div>
       </div>
     </div>
-    <div class="col-col-lg-6 col-lx-6 col-md-12 col-sm-12">
+    <div class="col col-lg-6 col-lx-6 col-md-12 col-sm-12 pr-0">
       <div class="grey-box">
         <div class="row">
           <div class="col col-lg-11 col-lx-11 col-md-11 col-sm-11">
