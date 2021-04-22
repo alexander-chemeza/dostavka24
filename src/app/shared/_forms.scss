@@ -87,6 +87,13 @@ label {
   box-sizing: border-box;
   line-height: 1.2;
 
+  &.round-btn {
+    width: 45px;
+    height: 45px;
+    border-radius: 22.5px;
+    padding: 0;
+  }
+
   &.filter-btn {
     width: 100%;
     height: 100%;
@@ -119,9 +126,21 @@ label {
   &.inactive-btn {
     color: rgba(0, 0, 0, 0.5);
     cursor: default;
+    transition: all .5s;
 
     &:hover {
-      background-color: #FFFFFF;
+      background-color: #e7e7e7;
+    }
+  }
+
+  &.submit-btn {
+    background-color: #ABCF37;
+    transition: all .5s;
+    border-radius: 20px;
+    color: #FFFFFF;
+
+    &:hover {
+      background-color: #99ba31;
     }
   }
 }
@@ -152,9 +171,8 @@ select {
   }
 }
 
-
 textarea {
-  margin-top: 20px;
+  margin-top: 20px !important;
   display: block;
   width: 100%;
   border-radius: 5px;

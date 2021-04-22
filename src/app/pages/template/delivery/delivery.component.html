@@ -44,7 +44,7 @@
       <button class="button white-btn inactive-btn" style="width: 50%">Дополнительные услуги</button>
     </div>
   </div>
-
+  <!--Main fields-->
   <div class="template-edit__main row template-edit__main__delivery">
     <div class="col col-lg-6 col-lx-6 col-md-12 col-sm-12 pl-0">
       <div class="grey-box">
@@ -65,7 +65,7 @@
           </div>
         </div>
         <!--Address-->
-        <div class="row">
+        <div class="row typical-row">
           <div class="col col-lg-11 col-lx-11 col-md-11 col-sm-11">
             <label for="address">Адрес выдачи груза:</label>
             <mat-form-field floatLabel="never" appearance="none">
@@ -81,11 +81,11 @@
           </div>
         </div>
         <!--Warning-->
-        <div class="row">
+        <div class="row typical-row">
           <p>Warning</p>
         </div>
         <!--Contact-->
-        <div class="row">
+        <div class="row typical-row">
           <div class="col col-lg-11 col-lx-11 col-md-11 col-sm-11">
             <label for="contact">Контакт (по адресу выдачи груза):</label>
             <mat-form-field floatLabel="never" appearance="none">
@@ -101,14 +101,14 @@
           </div>
         </div>
         <!--Date of cargo-->
-        <div class="row">
+        <div class="row typical-row">
           <div class="col col-lg-11 col-lx-11 col-md-11 col-sm-11">
             <label for="date">Дата выдачи груза:</label>
             <input type="date">
           </div>
         </div>
         <!--Params-->
-        <div class="row">
+        <div class="row typical-row">
           <div class="col col-lg-11 col-lx-11 col-md-11 col-sm-11">
             <div class="row">
               <div class="col col-lg-6 col-lx-6 col-md-6 col-sm-6 pl-0 pr-0">
@@ -139,14 +139,14 @@
           </div>
         </div>
         <!--TTN number-->
-        <div class="row">
+        <div class="row typical-row">
           <div class="col col-lg-11 col-lx-11 col-md-11 col-sm-11">
             <label for="ttn">Серия и номер ТТН:</label>
             <input type="text">
           </div>
         </div>
         <!--Notes-->
-        <div class="row">
+        <div class="row typical-row">
           <div class="col col-lg-11 col-lx-11 col-md-11 col-sm-11">
             <label for="notes">Примечание (по адресу выдачи груза):</label>
             <textarea name="notes"></textarea>
@@ -156,68 +156,135 @@
     </div>
     <div class="col col-lg-6 col-lx-6 col-md-12 col-sm-12 pr-0">
       <div class="grey-box">
+        <!--Recipient-->
         <div class="row">
           <div class="col col-lg-11 col-lx-11 col-md-11 col-sm-11">
-
+            <label for="recipient">Получатель:</label>
+            <mat-form-field floatLabel="never" appearance="none">
+              <mat-select [(ngModel)]="serviceType">
+                <mat-option *ngFor="let service of serviceTypes" [value]="service.value">
+                  {{service.viewValue}}
+                </mat-option>
+              </mat-select>
+            </mat-form-field>
           </div>
           <div class="col col-lg-1 col-lx-1 col-md-1 col-sm-1">
 
           </div>
         </div>
-        <div class="row">
+        <!--Delivery address-->
+        <div class="row typical-row">
           <div class="col col-lg-11 col-lx-11 col-md-11 col-sm-11">
-
+            <label for="address">Адресс доставки груза:</label>
+            <mat-form-field floatLabel="never" appearance="none">
+              <mat-select [(ngModel)]="serviceType">
+                <mat-option *ngFor="let service of serviceTypes" [value]="service.value">
+                  {{service.viewValue}}
+                </mat-option>
+              </mat-select>
+            </mat-form-field>
           </div>
           <div class="col col-lg-1 col-lx-1 col-md-1 col-sm-1">
 
           </div>
         </div>
-        <div class="row"></div>
-        <div class="row">
+        <!--Warning-->
+        <div class="row typical-row">
+          <p>Alert</p>
+        </div>
+        <!--Contact-->
+        <div class="row typical-row">
           <div class="col col-lg-11 col-lx-11 col-md-11 col-sm-11">
-
+            <label for="contact">Контакт (по адресу доставки груза)</label>
+            <mat-form-field floatLabel="never" appearance="none">
+              <mat-select [(ngModel)]="serviceType">
+                <mat-option *ngFor="let service of serviceTypes" [value]="service.value">
+                  {{service.viewValue}}
+                </mat-option>
+              </mat-select>
+            </mat-form-field>
           </div>
           <div class="col col-lg-1 col-lx-1 col-md-1 col-sm-1">
 
           </div>
         </div>
-        <div class="row">
+        <!--Date-->
+        <div class="row typical-row">
           <div class="col col-lg-11 col-lx-11 col-md-11 col-sm-11">
-
+            <label for="date">Дата доставки груза</label>
+            <input type="date">
           </div>
         </div>
-        <div class="row">
+        <!--Params-->
+        <div class="row typical-row">
           <div class="col col-lg-11 col-lx-11 col-md-11 col-sm-11">
             <div class="row">
-              <div class="col col-lg-6 col-lx-6 col-md-6 col-sm-6">
+              <div class="col col-lg-6 col-lx-6 col-md-6 col-sm-6 pl-0 pr-0">
                 <div class="row">
-                  <div class="col col-lg-7 col-lx-7 col-md-7 col-sm-7"></div>
-                  <div class="col col-lg-5 col-lx-5 col-md-5 col-sm-5"></div>
+                  <div class="col col-lg-7 col-lx-7 col-md-7 col-sm-7 pl-0">
+                    <label for="date">Дата выдачи груза c:</label>
+                    <input type="text">
+                  </div>
+                  <div class="col col-lg-5 col-lx-5 col-md-5 col-sm-5">
+                    <label for="till">по:</label>
+                    <input type="text">
+                  </div>
                 </div>
               </div>
-              <div class="col col-lg-6 col-lx-6 col-md-6 col-sm-6">
+              <div class="col col-lg-6 col-lx-6 col-md-6 col-sm-6 pl-0 pr-0">
                 <div class="row">
-                  <div class="col col-lg-7 col-lx-7 col-md-7 col-sm-7"></div>
-                  <div class="col col-lg-5 col-lx-5 col-md-5 col-sm-5"></div>
+                  <div class="col col-lg-7 col-lx-7 col-md-7 col-sm-7">
+                    <label for="time">Время перерыва c:</label>
+                    <input type="text">
+                  </div>
+                  <div class="col col-lg-5 col-lx-5 col-md-5 col-sm-5 pr-0">
+                    <label for="till">по:</label>
+                    <input type="text">
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <div class="row">
+        <!--Email-->
+        <div class="row typical-row" style="margin-top: 32px">
           <div class="col col-lg-11 col-lx-11 col-md-11 col-sm-11">
             <div class="row">
-              <div class="col col-lg-5 col-lx-5 col-md-5 col-sm-5"></div>
-              <div class="col col-lg-7 col-lx-7 col-md-7 col-sm-7"></div>
+              <div class="col col-lg-5 col-lx-5 col-md-5 col-sm-5 pl-0" style="display: flex; flex-direction: row">
+                <input type="checkbox" name="if-mail" id="if-mail">
+                <label for="if-mail">Email оповещение получателя</label>
+              </div>
+              <div class="col col-lg-7 col-lx-7 col-md-7 col-sm-7 pr-0">
+                <input type="email" placeholder="Введите email">
+              </div>
             </div>
           </div>
         </div>
-        <div class="row">
+        <!--Notes-->
+        <div class="row typical-row">
           <div class="col col-lg-11 col-lx-11 col-md-11 col-sm-11">
-
+            <label for="notes">Примечание (по адресу выдачи груза):</label>
+            <textarea></textarea>
           </div>
         </div>
       </div>
+    </div>
+  </div>
+
+  <div class="template-edit__end-controls row" style="display: flex; justify-content: space-between; margin-top: 30px;">
+    <div class="col col-lg-2 col-lx-2 col-md-2 col-sm-2 pl-0" style="display: flex; justify-content: space-between">
+      <div class="row" style="display: flex; flex-direction: row; justify-content: space-between">
+        <hr>
+        <div class="col col-lg-1 col-lx-1 col-md-1 col-sm-1 pl-0">
+          <button class="button round-btn active-btn">1</button>
+        </div>
+        <div class="col col-lg-1 col-lx-1 col-md-1 col-sm-1 pr-0">
+          <button class="button round-btn inactive-btn">2</button>
+        </div>
+      </div>
+    </div>
+    <div class="col col-lg-2 col-lx-2 col-md-2 col-sm-2 pr-0" style="display: flex; justify-content: flex-end">
+      <button class="button submit-btn">Далее</button>
     </div>
   </div>
 </div>
