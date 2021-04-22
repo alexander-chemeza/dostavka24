@@ -25,3 +25,25 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+## Basic forms templates
+#### Checkbox
+This is styled in forms.scss.
+```
+<div class="checkbox-block" style="margin-right: 15px;">
+   <input class="checkbox-block-item" type="checkbox" name="if-mail" id="if-mail">
+   <span class="checkbox-block-icon"></span>
+</div>
+```
+#### Select
+Here Angular Material has been used here. Go to the official web-site for more information.
+The custom theme has been placed in material.scss. Example of select:
+```
+<mat-form-field floatLabel="never" appearance="none">
+   <mat-select [(ngModel)]="serviceType">
+       <mat-option *ngFor="let service of serviceTypes" [value]="service.value">
+          {{service.viewValue}}
+       </mat-option>
+   </mat-select>
+</mat-form-field>
+```

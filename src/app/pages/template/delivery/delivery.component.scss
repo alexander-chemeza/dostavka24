@@ -45,3 +45,86 @@
     height: 2px;
   }
 }
+
+.left-side {
+  width: 100%;
+  max-width: 827px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+
+.formula {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.multiply {
+  margin-top: 12px;
+  width: 20px;
+  height: 20px;
+  background-image: url("../../../../assets/img/common/multiply.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.box-btn {
+  width: 100%;
+  max-width: 181px;
+  background-image: url("../../../../assets/img/template/box-black.svg");
+  background-repeat: no-repeat;
+  background-position: 20% 50%;
+
+  &.active-btn {
+    background-image: url("../../../../assets/img/template/box-white.svg");
+  }
+}
+
+.pallet-btn {
+  width: 100%;
+  max-width: 183px;
+  background-image: url("../../../../assets/img/template/pallet-black.svg");
+  background-repeat: no-repeat;
+  background-position: 15% 50%;
+
+  &.active-btn {
+    background-image: url("../../../../assets/img/template/pallet-white.svg");
+  }
+}
+
+.oversize-btn {
+  width: 100%;
+  max-width: 199px;
+  background-image: url("../../../../assets/img/template/oversize-black.svg");
+  background-repeat: no-repeat;
+  background-position: 15% 50%;
+
+  &.active-btn {
+    background-image: url("../../../../assets/img/template/oversize-white.svg");
+  }
+}
+
+.bag-btn {
+  width: 100%;
+  max-width: 199px;
+  background-image: url("../../../../assets/img/template/bag-black.svg");
+  background-repeat: no-repeat;
+  background-position: 23% 50%;
+
+  &.active-btn {
+    background-image: url("../../../../assets/img/template/bag-white.svg");
+  }
+}
+
+.plain-text {
+  font-family: "Montserrat-Medium", sans-serif;
+  font-size: 14px;
+  color: #000000;
+  margin: 0;
+}
