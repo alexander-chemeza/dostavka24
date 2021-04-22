@@ -50,7 +50,7 @@
       <div class="grey-box">
         <!--Sender-->
         <div class="row">
-          <div class="col col-lg-11 col-lx-11 col-md-11 col-sm-11">
+          <div class="col col-lg-11 col-lx-11 col-md-11 col-sm-11 pl-0">
             <label for="sender">Отправитель</label>
             <mat-form-field floatLabel="never" appearance="none">
               <mat-select [(ngModel)]="serviceType">
@@ -61,12 +61,12 @@
             </mat-form-field>
           </div>
           <div class="col col-lg-1 col-lx-1 col-md-1 col-sm-1">
-
+            <button class="button active-btn round-btn add-btn" style="margin-top: 31px;"></button>
           </div>
         </div>
         <!--Address-->
         <div class="row typical-row">
-          <div class="col col-lg-11 col-lx-11 col-md-11 col-sm-11">
+          <div class="col col-lg-11 col-lx-11 col-md-11 col-sm-11 pl-0">
             <label for="address">Адрес выдачи груза:</label>
             <mat-form-field floatLabel="never" appearance="none">
               <mat-select [(ngModel)]="serviceType">
@@ -77,16 +77,16 @@
             </mat-form-field>
           </div>
           <div class="col col-lg-1 col-lx-1 col-md-1 col-sm-1">
-
+            <button class="button active-btn round-btn add-btn" style="margin-top: 31px;"></button>
           </div>
         </div>
         <!--Warning-->
         <div class="row typical-row">
-          <p>Warning</p>
+          <p class="warning"><span class="warning-grey-text">Дни обслуживания :  </span><span class="warning-black-text">ПН-ВТ-СР-ЧТ-ПТ-СБ</span></p>
         </div>
         <!--Contact-->
         <div class="row typical-row">
-          <div class="col col-lg-11 col-lx-11 col-md-11 col-sm-11">
+          <div class="col col-lg-11 col-lx-11 col-md-11 col-sm-11 pl-0">
             <label for="contact">Контакт (по адресу выдачи груза):</label>
             <mat-form-field floatLabel="never" appearance="none">
               <mat-select [(ngModel)]="serviceType">
@@ -97,19 +97,19 @@
             </mat-form-field>
           </div>
           <div class="col col-lg-1 col-lx-1 col-md-1 col-sm-1">
-
+            <button class="button active-btn round-btn add-btn" style="margin-top: 31px;"></button>
           </div>
         </div>
         <!--Date of cargo-->
         <div class="row typical-row">
-          <div class="col col-lg-11 col-lx-11 col-md-11 col-sm-11">
+          <div class="col col-lg-11 col-lx-11 col-md-11 col-sm-11 pl-0">
             <label for="date">Дата выдачи груза:</label>
             <input type="date">
           </div>
         </div>
         <!--Params-->
         <div class="row typical-row">
-          <div class="col col-lg-11 col-lx-11 col-md-11 col-sm-11">
+          <div class="col col-lg-11 col-lx-11 col-md-11 col-sm-11 pl-0">
             <div class="row">
               <div class="col col-lg-6 col-lx-6 col-md-6 col-sm-6 pl-0 pr-0">
                 <div class="row">
@@ -140,14 +140,14 @@
         </div>
         <!--TTN number-->
         <div class="row typical-row">
-          <div class="col col-lg-11 col-lx-11 col-md-11 col-sm-11">
+          <div class="col col-lg-11 col-lx-11 col-md-11 col-sm-11 pl-0">
             <label for="ttn">Серия и номер ТТН:</label>
             <input type="text">
           </div>
         </div>
         <!--Notes-->
         <div class="row typical-row">
-          <div class="col col-lg-11 col-lx-11 col-md-11 col-sm-11">
+          <div class="col col-lg-11 col-lx-11 col-md-11 col-sm-11 pl-0">
             <label for="notes">Примечание (по адресу выдачи груза):</label>
             <textarea name="notes"></textarea>
           </div>
@@ -158,7 +158,7 @@
       <div class="grey-box">
         <!--Recipient-->
         <div class="row">
-          <div class="col col-lg-11 col-lx-11 col-md-11 col-sm-11">
+          <div class="col col-lg-11 col-lx-11 col-md-11 col-sm-11 pl-0">
             <label for="recipient">Получатель:</label>
             <mat-form-field floatLabel="never" appearance="none">
               <mat-select [(ngModel)]="serviceType">
@@ -169,12 +169,12 @@
             </mat-form-field>
           </div>
           <div class="col col-lg-1 col-lx-1 col-md-1 col-sm-1">
-
+            <button class="button active-btn round-btn add-btn" style="margin-top: 31px;"></button>
           </div>
         </div>
         <!--Delivery address-->
         <div class="row typical-row">
-          <div class="col col-lg-11 col-lx-11 col-md-11 col-sm-11">
+          <div class="col col-lg-11 col-lx-11 col-md-11 col-sm-11 pl-0">
             <label for="address">Адресс доставки груза:</label>
             <mat-form-field floatLabel="never" appearance="none">
               <mat-select [(ngModel)]="serviceType">
@@ -185,16 +185,16 @@
             </mat-form-field>
           </div>
           <div class="col col-lg-1 col-lx-1 col-md-1 col-sm-1">
-
+            <button class="button active-btn round-btn add-btn" style="margin-top: 31px;"></button>
           </div>
         </div>
         <!--Warning-->
         <div class="row typical-row">
-          <p>Alert</p>
+          <p class="warning"><span class="warning-grey-text">Дни обслуживания :  </span><span class="warning-black-text">ПН-ВТ-СР-ЧТ-ПТ-СБ</span></p>
         </div>
         <!--Contact-->
         <div class="row typical-row">
-          <div class="col col-lg-11 col-lx-11 col-md-11 col-sm-11">
+          <div class="col col-lg-11 col-lx-11 col-md-11 col-sm-11 pl-0">
             <label for="contact">Контакт (по адресу доставки груза)</label>
             <mat-form-field floatLabel="never" appearance="none">
               <mat-select [(ngModel)]="serviceType">
@@ -205,19 +205,19 @@
             </mat-form-field>
           </div>
           <div class="col col-lg-1 col-lx-1 col-md-1 col-sm-1">
-
+            <button class="button active-btn round-btn add-btn" style="margin-top: 31px;"></button>
           </div>
         </div>
         <!--Date-->
         <div class="row typical-row">
-          <div class="col col-lg-11 col-lx-11 col-md-11 col-sm-11">
+          <div class="col col-lg-11 col-lx-11 col-md-11 col-sm-11 pl-0">
             <label for="date">Дата доставки груза</label>
             <input type="date">
           </div>
         </div>
         <!--Params-->
         <div class="row typical-row">
-          <div class="col col-lg-11 col-lx-11 col-md-11 col-sm-11">
+          <div class="col col-lg-11 col-lx-11 col-md-11 col-sm-11 pl-0">
             <div class="row">
               <div class="col col-lg-6 col-lx-6 col-md-6 col-sm-6 pl-0 pr-0">
                 <div class="row">
@@ -248,10 +248,13 @@
         </div>
         <!--Email-->
         <div class="row typical-row" style="margin-top: 32px">
-          <div class="col col-lg-11 col-lx-11 col-md-11 col-sm-11">
+          <div class="col col-lg-11 col-lx-11 col-md-11 col-sm-11 pl-0">
             <div class="row">
-              <div class="col col-lg-5 col-lx-5 col-md-5 col-sm-5 pl-0" style="display: flex; flex-direction: row">
-                <input type="checkbox" name="if-mail" id="if-mail">
+              <div class="col col-lg-5 col-lx-5 col-md-5 col-sm-5 pl-0" style="display: flex; flex-direction: row; padding-top: 12px;">
+                <div class="checkbox-block" style="margin-right: 15px;">
+                  <input class="checkbox-block-item" type="checkbox" name="if-mail" id="if-mail">
+                  <span class="checkbox-block-icon"></span>
+                </div>
                 <label for="if-mail">Email оповещение получателя</label>
               </div>
               <div class="col col-lg-7 col-lx-7 col-md-7 col-sm-7 pr-0">
@@ -262,7 +265,7 @@
         </div>
         <!--Notes-->
         <div class="row typical-row">
-          <div class="col col-lg-11 col-lx-11 col-md-11 col-sm-11">
+          <div class="col col-lg-11 col-lx-11 col-md-11 col-sm-11 pl-0">
             <label for="notes">Примечание (по адресу выдачи груза):</label>
             <textarea></textarea>
           </div>
