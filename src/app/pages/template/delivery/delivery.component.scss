@@ -66,14 +66,33 @@
 
 .mail-btn {
   width: 100%;
-  max-width: 181px;
+  max-width: 200px;
   background-image: url("../../../../assets/img/template/mail.svg");
   background-repeat: no-repeat;
-  background-position: 20% 50%;
+  background-position: 15% 50%;
 
   &.active-btn {
     background-image: url("../../../../assets/img/template/mail.svg");
   }
+}
+
+.bin-btn {
+  width: 100%;
+  max-width: 270px;
+  background-image: url("../../../../assets/img/template/shopping-cart.svg");
+  background-repeat: no-repeat;
+  background-position: 10% 50%;
+
+  &.active-btn {
+    background-image: url("../../../../assets/img/template/shopping-cart.svg");
+  }
+}
+
+.delete-btn {
+  background-color: #D16C65;
+  background-image: url("../../../../assets/img/common/delete-white.svg");
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .box-btn {
