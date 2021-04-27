@@ -3,7 +3,7 @@ import {HttpClient, HttpHeaders} from '@angular/common/http';
 
 // login user data interface
 interface User {
-  name: string;
+  login: string;
   role: string;
 }
 
@@ -34,7 +34,7 @@ export class RestapiService {
     });
 
     // GET method to login, that returns an object {"name": "value", role: "value"}
-    return this.http.get<User>('http://localhost:8080/user/getUserInfo', {headers, responseType: 'json'});
+    return this.http.get<User>('http://localhost:8080/login', {headers, responseType: 'json'});
   }
 
   public registerEntityWithAgreement(data: EntityWithAgreement) {
